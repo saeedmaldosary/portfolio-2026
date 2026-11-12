@@ -18,9 +18,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Switch to https://saeedmaldosary.com and "/" when the custom domain moves here.
+      # When saeedmaldosary.com moves here, set repo variables
+      # SITE_URL=https://saeedmaldosary.com and BASE_PATH= (empty).
       SITE_URL: ${{ vars.SITE_URL || 'https://saeedmaldosary.github.io' }}
-      BASE_PATH: ${{ vars.BASE_PATH || '/portfolio-2026' }}
+      BASE_PATH: ${{ vars.SITE_URL && vars.BASE_PATH || '/portfolio-2026' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,9 +30,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: out
 
   deploy:
     needs: build

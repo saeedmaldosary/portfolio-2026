@@ -112,7 +112,7 @@ export const certifications = [
 
 export const t = {
   en: {
-    dir: "ltr",
+    dir: "ltr" as const,
     metaTitle: "Saeed Aldosary — Software Engineer",
     metaDesc:
       "Saeed Aldosary is a full-stack software engineer building real-time systems, APIs and modern web apps.",
@@ -146,11 +146,11 @@ export const t = {
     verify: "Verify",
     contactTitle: "Let's build something",
     contactBody: "Have a project, a role or an idea? My inbox is open — I'd love to hear from you.",
-    footer: "Built with Astro & Tailwind.",
+    footer: "Built with Next.js & shadcn/ui.",
     theme: "Toggle theme",
   },
   ar: {
-    dir: "rtl",
+    dir: "rtl" as const,
     metaTitle: "سعيد الدوسري — مهندس برمجيات",
     metaDesc: "سعيد الدوسري مهندس برمجيات متكامل يبني أنظمة لحظية وواجهات برمجية وتطبيقات ويب حديثة.",
     nav: { about: "عني", work: "أعمالي", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
@@ -182,7 +182,7 @@ export const t = {
     verify: "تحقق",
     contactTitle: "لنبنِ شيئاً معاً",
     contactBody: "عندك مشروع أو فرصة أو فكرة؟ يسعدني أسمع منك.",
-    footer: "مبني باستخدام Astro و Tailwind.",
+    footer: "مبني باستخدام Next.js و shadcn/ui.",
     theme: "تبديل المظهر",
   },
 } as const;
