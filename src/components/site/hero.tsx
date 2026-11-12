@@ -1,34 +1,47 @@
 import Image from "next/image";
-import { FileText, Mail } from "lucide-react";
+import { ArrowDown, Check, Mail } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
-import { links, t, type Lang } from "@/lib/content";
+import { t, type Lang } from "@/lib/content";
 import portrait from "@/assets/saeed.webp";
 
 export function Hero({ lang }: { lang: Lang }) {
   const c = t[lang];
 
   return (
-    <section id="top" className="mx-auto grid max-w-5xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
+    // On larger screens the hero fills the first screen (minus the 4rem header).
+    <section
+      id="top"
+      className="mx-auto grid max-w-5xl items-center gap-12 px-4 py-16 md:min-h-[calc(100svh-4rem)] md:grid-cols-[1fr_auto]"
+    >
       <div>
-        <h1 className="text-4xl font-bold tracking-tight rtl:tracking-normal sm:text-5xl">{c.name}</h1>
-        <p className="mt-4 text-xl leading-relaxed">{c.headline}</p>
-        <p className="mt-4 leading-relaxed text-muted-foreground">{c.intro}</p>
+        <h1 className="text-5xl font-bold tracking-tight rtl:tracking-normal md:text-6xl">{c.name}</h1>
+        <p className="mt-5 text-xl leading-relaxed md:text-2xl">{c.headline}</p>
+        <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">{c.intro}</p>
 
-        <div className="mt-8 flex flex-wrap items-center gap-3">
+        <div className="mt-8 flex flex-wrap gap-3">
           <a href="#contact" className={buttonVariants({ size: "lg" })}>
             <Mail /> {c.contactCta}
           </a>
-          <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
-            <FileText /> {c.resume}
+          <a href="#work" className={buttonVariants({ size: "lg", variant: "outline" })}>
+            <ArrowDown /> {c.seeWork}
           </a>
         </div>
+
+        {/* Quick credibility facts a CTO would otherwise only find further down */}
+        <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t pt-6 text-sm text-muted-foreground">
+          {c.credentials.map((item) => (
+            <li key={item} className="flex items-center gap-2">
+              <Check className="size-4 text-primary" /> {item}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <Image
         src={portrait}
         alt={c.name}
         priority
-        className="mx-auto aspect-[4/5] w-full max-w-sm rounded-2xl bg-primary/80 object-cover object-top"
+        className="mx-auto aspect-[4/5] w-full max-w-sm rounded-2xl bg-primary/80 object-cover object-top md:w-80"
       />
     </section>
   );

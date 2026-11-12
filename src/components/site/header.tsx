@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { FileText } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
-import { t, type Lang } from "@/lib/content";
+import { links, t, type Lang } from "@/lib/content";
 import { ThemeToggle } from "./theme-toggle";
 
 const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -7,13 +11,24 @@ const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export function Header({ lang }: { lang: Lang }) {
   const c = t[lang];
 
-  const links = [
-    { href: "#work", label: c.nav.work },
-    { href: "#experience", label: c.nav.experience },
-    { href: "#skills", label: c.nav.skills },
-    { href: "#certifications", label: c.nav.certs },
-    { href: "#contact", label: c.nav.contact },
+  const sections = [
+    { id: "work", label: c.nav.work },
+    { id: "experience", label: c.nav.experience },
+    { id: "skills", label: c.nav.skills },
+    { id: "certifications", label: c.nav.certs },
+    { id: "contact", label: c.nav.contact },
   ];
+
+  // Highlight the menu link of the section that is in the middle of the screen.
+  const [active, setActive] = useState("");
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((entry) => entry.isIntersecting && setActive(entry.target.id)),
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    document.querySelectorAll("main section[id]").forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
@@ -27,17 +42,23 @@ export function Header({ lang }: { lang: Lang }) {
 
         {/* Section links: hidden on phones to keep the header to one row */}
         <ul className="hidden gap-1 md:flex">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} className={buttonVariants({ variant: "ghost" })}>
-                {link.label}
+          {sections.map((section) => (
+            <li key={section.id}>
+              <a
+                href={`#${section.id}`}
+                className={buttonVariants({ variant: "ghost", className: active === section.id ? "bg-muted" : "" })}
+              >
+                {section.label}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Language switch + theme toggle */}
-        <div className="flex items-center gap-2">
+        {/* Resume, language switch, theme toggle */}
+        <div className="flex items-center gap-1">
+          <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ variant: "outline" })}>
+            <FileText /> {c.resume}
+          </a>
           <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "ghost" })}>
             {lang === "en" ? "العربية" : "English"}
           </a>
