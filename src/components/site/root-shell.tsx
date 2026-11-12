@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Vazirmatn } from "next/font/google";
+import { Almarai, Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { t, type Lang } from "@/lib/content";
 
-// One font per language, both exposed as --font-main (used by Tailwind's font-sans).
-// English: Geist. Arabic: Vazirmatn, which also has Latin letters, so mixed text
-// like "Next.js" inside an Arabic sentence matches the Arabic around it.
-const geist = Geist({ variable: "--font-main", subsets: ["latin"] });
-const vazirmatn = Vazirmatn({ variable: "--font-main", subsets: ["arabic", "latin"] });
-const fonts = { en: geist, ar: vazirmatn };
+const geist = Geist({ subsets: ["latin"] });
+const almarai = Almarai({ subsets: ["arabic", "latin"], weight: ["300", "400", "700", "800"] });
+
+// The page font, passed to CSS as --font-main (used by Tailwind's font-sans).
+// English: Geist, with Almarai for any Arabic letters (like the "العربية" button).
+// We use only "Geist" (not its "Geist Fallback", which is Arial; Arial has Arabic
+// letters on Windows and would win over Almarai).
+// Arabic: Almarai for everything, so words like "Next.js" match the Arabic around them.
+const fontFamily = {
+  en: `'Geist', ${almarai.style.fontFamily}`,
+  ar: almarai.style.fontFamily,
+};
 
 const siteUrl = process.env.SITE_URL ?? "https://saeedmaldosary.com";
 const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -20,7 +26,7 @@ export function buildMetadata(lang: Lang): Metadata {
     metadataBase: new URL(siteUrl),
     title: c.metaTitle,
     description: c.metaDesc,
-    icons: { icon: `${base}/favicon.ico` },
+    icons: { icon: `${base}/favicon.svg` },
     alternates: {
       canonical: `${base}${path}`,
       languages: { en: `${base}/`, ar: `${base}/ar/` },
@@ -41,7 +47,8 @@ export function RootShell({ lang, children }: { lang: Lang; children: React.Reac
       lang={lang}
       dir={t[lang].dir}
       suppressHydrationWarning
-      className={`${fonts[lang].variable} antialiased`}
+      className="antialiased"
+      style={{ "--font-main": fontFamily[lang] } as React.CSSProperties}
     >
       <body className="min-h-screen">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>

@@ -2,8 +2,7 @@ import Image from "next/image";
 import { FileText, Mail, MapPin } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { links, t, type Lang } from "@/lib/content";
-import portrait from "@/assets/saeed.jpg";
-import { SocialLinks } from "./social-links";
+import portrait from "@/assets/saeed.webp";
 
 export function Hero({ lang }: { lang: Lang }) {
   const c = t[lang];
@@ -12,7 +11,7 @@ export function Hero({ lang }: { lang: Lang }) {
     <section id="top" className="mx-auto grid max-w-5xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
       <div>
         <p className="text-lg text-muted-foreground">{c.hello}</p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">{c.name}</h1>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight rtl:tracking-normal sm:text-5xl">{c.name}</h1>
         <p className="mt-3 text-lg font-medium text-primary">{c.role}</p>
         <p className="mt-1 flex items-center gap-1 text-sm text-muted-foreground">
           <MapPin className="size-4" /> {c.location}
@@ -26,7 +25,6 @@ export function Hero({ lang }: { lang: Lang }) {
           <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
             <FileText /> {c.resume}
           </a>
-          <SocialLinks />
         </div>
       </div>
 
@@ -34,7 +32,7 @@ export function Hero({ lang }: { lang: Lang }) {
         src={portrait}
         alt={c.name}
         priority
-        className="mx-auto aspect-[4/5] w-full max-w-sm rounded-2xl object-cover object-top"
+        className="mx-auto aspect-[4/5] w-full max-w-sm rounded-2xl bg-primary/80 object-cover object-top"
       />
     </section>
   );

@@ -1,4 +1,3 @@
-import { Languages } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { t, type Lang } from "@/lib/content";
 import { ThemeToggle } from "./theme-toggle";
@@ -7,8 +6,6 @@ const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function Header({ lang }: { lang: Lang }) {
   const c = t[lang];
-  const otherLang = lang === "en" ? "ar" : "en";
-  const otherLangHref = otherLang === "ar" ? `${base}/ar/` : `${base}/`;
 
   const links = [
     { href: "#experience", label: c.nav.experience },
@@ -20,14 +17,10 @@ export function Header({ lang }: { lang: Lang }) {
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
       <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 px-4">
-        {/* Logo: initials badge + name and role */}
-        <a href="#top" className="flex h-16 items-center gap-3">
+        {/* Logo: initials badge, links back to the top */}
+        <a href="#top" aria-label={c.name} className="flex h-16 items-center">
           <span className="grid size-9 place-items-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
             {c.initials}
-          </span>
-          <span className="leading-tight">
-            <span className="block font-semibold">{c.name}</span>
-            <span className="block text-xs text-muted-foreground">{c.shortRole}</span>
           </span>
         </a>
 
@@ -43,9 +36,9 @@ export function Header({ lang }: { lang: Lang }) {
         </ul>
 
         {/* Language switch + theme toggle */}
-        <div className="flex items-center gap-1">
-          <a href={otherLangHref} lang={otherLang} className={buttonVariants({ variant: "ghost" })}>
-            <Languages /> {c.switchLang}
+        <div className="flex items-center gap-2">
+          <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "outline", size: "sm" })}>
+            {lang === "en" ? "العربية" : "English"}
           </a>
           <ThemeToggle label={c.theme} />
         </div>

@@ -9,7 +9,6 @@ export function Footer({ lang }: { lang: Lang }) {
         <p>
           © {new Date().getFullYear()} {c.name}
         </p>
-        <p>{c.footer}</p>
       </div>
     </footer>
   );
