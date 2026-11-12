@@ -15,7 +15,12 @@ export function Hero({ lang }: { lang: Lang }) {
     <section id="top" className="mx-auto flex max-w-5xl flex-col px-4 md:min-h-svh">
       {/* The page has no header: the language switch and theme toggle sit in the top corner */}
       <div className="flex items-center justify-end gap-1 pt-4">
-        <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "ghost" })}>
+        {/* lang tells the browser this link's text is in the other language (it also picks the right font) */}
+        <a
+          href={lang === "en" ? `${base}/ar/` : `${base}/`}
+          lang={lang === "en" ? "ar" : "en"}
+          className={buttonVariants({ variant: "ghost" })}
+        >
           {lang === "en" ? "العربية" : "English"}
         </a>
         <ThemeToggle label={c.theme} />
@@ -41,7 +46,8 @@ export function Hero({ lang }: { lang: Lang }) {
         <Image
           src={portrait}
           alt={c.name}
-          priority
+          loading="eager"
+          fetchPriority="high"
           className="mx-auto aspect-[4/5] w-full max-w-sm rounded-2xl bg-primary/80 object-cover object-top md:w-80"
         />
       </div>

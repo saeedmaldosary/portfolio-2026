@@ -132,3 +132,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/* On the English page, Arabic words (marked lang="ar") use the Arabic font */
+html[lang="en"] :lang(ar) {
+  font-family: var(--font-arabic);
+}
+
