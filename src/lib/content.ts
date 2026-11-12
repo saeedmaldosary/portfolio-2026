@@ -240,10 +240,8 @@ export const t = {
     metaTitle: "Saeed Aldosary",
     metaDesc:
       "Lead software engineer with almost 6 years of full-stack experience in Next.js, React and Spring Boot microservices.",
-    nav: { work: "Work", experience: "Experience", skills: "Skills", certs: "Certifications", contact: "Contact" },
     theme: "Toggle theme",
     name: "Saeed Aldosary",
-    initials: "SA",
     headline: "Lead Software Engineer at HUMAIN, with almost 6 years of full-stack experience.",
     intro:
       "I build enterprise platforms with Next.js and Spring Boot, and own architecture, code quality and delivery from design to production.",
@@ -266,10 +264,8 @@ export const t = {
     dir: "rtl" as const,
     metaTitle: "Saeed Aldosary",
     metaDesc: "مهندس برمجيات Full-Stack، 6 سنوات خبرة في Next.js و React و Spring Boot.",
-    nav: { work: "الأعمال", experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     theme: "الوضع الليلي / النهاري",
     name: "سعيد الدوسري",
-    initials: "SA",
     headline: "قائد فريق هندسة البرمجيات في HUMAIN، و 6 سنوات خبرة في الـ Full-Stack.",
     intro:
       "أبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
