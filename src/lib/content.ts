@@ -180,12 +180,12 @@ export const t = {
   },
   ar: {
     dir: "rtl" as const,
-    metaTitle: "سعيد الدوسري — قائد فريق هندسة البرمجيات",
+    metaTitle: "Saeed Aldosary — Lead Software Engineer",
     metaDesc: "مهندس برمجيات Full-Stack، 6 سنوات خبرة في Next.js و React و Spring Boot.",
     nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     theme: "الوضع الليلي / النهاري",
     name: "سعيد الدوسري",
-    initials: "س",
+    initials: "SA",
     headline: "قائد فريق هندسة البرمجيات، و 6 سنوات خبرة في الـ Full-Stack.",
     intro:
       "أبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
