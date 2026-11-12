@@ -25,10 +25,10 @@ export function Header({ lang }: { lang: Lang }) {
         </a>
 
         {/* Section links: a second row on phones, inline on larger screens */}
-        <ul className="order-last flex w-full justify-center gap-6 pb-3 text-sm text-muted-foreground md:order-none md:w-auto md:pb-0">
+        <ul className="order-last flex w-full justify-center gap-1 pb-3 md:order-none md:w-auto md:pb-0">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="transition-colors hover:text-foreground">
+              <a href={link.href} className={buttonVariants({ variant: "ghost" })}>
                 {link.label}
               </a>
             </li>
@@ -37,7 +37,7 @@ export function Header({ lang }: { lang: Lang }) {
 
         {/* Language switch + theme toggle */}
         <div className="flex items-center gap-2">
-          <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "outline", size: "sm" })}>
+          <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "ghost" })}>
             {lang === "en" ? "العربية" : "English"}
           </a>
           <ThemeToggle label={c.theme} />

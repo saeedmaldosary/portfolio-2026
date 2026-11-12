@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
 import { certifications, t, type Lang } from "@/lib/content";
 import { Section } from "./section";
 
@@ -17,7 +18,7 @@ export function Certifications({ lang }: { lang: Lang }) {
             <div className="flex items-center gap-4 text-sm">
               <span className="text-muted-foreground">{cert.date[lang]}</span>
               {cert.url && (
-                <a href={cert.url} target="_blank" rel="noopener" className="flex items-center gap-1 text-primary hover:underline">
+                <a href={cert.url} target="_blank" rel="noopener" className={buttonVariants({ variant: "ghost", size: "sm", className: "text-primary" })}>
                   {c.verify} <ArrowUpRight className="size-4" />
                 </a>
               )}

@@ -160,12 +160,12 @@ export const t = {
     dir: "ltr" as const,
     metaTitle: "Saeed Aldosary — Lead Software Engineer",
     metaDesc:
-      "Lead software engineer with almost 6 years of full-stack experience in Next.js, React and Spring Boot microservices. Based in Riyadh.",
+      "Lead software engineer with almost 6 years of full-stack experience in Next.js, React and Spring Boot microservices.",
     nav: { experience: "Experience", skills: "Skills", certs: "Certifications", contact: "Contact" },
     theme: "Toggle theme",
     name: "Saeed Aldosary",
     initials: "SA",
-    headline: "Lead Software Engineer in Riyadh, with almost 6 years of full-stack experience.",
+    headline: "Lead Software Engineer with almost 6 years of full-stack experience.",
     intro:
       "I lead a team of 3 engineers building enterprise platforms with Next.js and Spring Boot, and I own architecture, code quality and delivery from design to production.",
     resume: "Resume",
@@ -181,12 +181,12 @@ export const t = {
   ar: {
     dir: "rtl" as const,
     metaTitle: "سعيد الدوسري — قائد فريق هندسة البرمجيات",
-    metaDesc: "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في Next.js و React و Spring Boot، أقود فريق تطوير في الرياض.",
+    metaDesc: "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في Next.js و React و Spring Boot، أقود فريق تطوير.",
     nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     theme: "الوضع الليلي / النهاري",
     name: "سعيد الدوسري",
     initials: "س",
-    headline: "قائد فريق هندسة البرمجيات في الرياض، بخبرة قرابة 6 سنوات في الـ Full-Stack.",
+    headline: "قائد فريق هندسة البرمجيات، بخبرة قرابة 6 سنوات في الـ Full-Stack.",
     intro:
       "أقود فريق من 3 مهندسين نبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
     resume: "السيرة الذاتية",
