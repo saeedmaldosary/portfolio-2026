@@ -16,7 +16,7 @@ export function Header({ lang }: { lang: Lang }) {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 px-4">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between gap-6 px-4">
         {/* Logo: initials badge, links back to the top */}
         <a href="#top" aria-label={c.name} className="flex h-16 items-center">
           <span className="grid size-9 place-items-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
@@ -24,8 +24,8 @@ export function Header({ lang }: { lang: Lang }) {
           </span>
         </a>
 
-        {/* Section links: a second row on phones, inline on larger screens */}
-        <ul className="order-last flex w-full justify-center gap-1 pb-3 md:order-none md:w-auto md:pb-0">
+        {/* Section links: hidden on phones to keep the header to one row */}
+        <ul className="hidden gap-1 md:flex">
           {links.map((link) => (
             <li key={link.href}>
               <a href={link.href} className={buttonVariants({ variant: "ghost" })}>
