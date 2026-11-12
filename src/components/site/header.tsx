@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FileText } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { links, t, type Lang } from "@/lib/content";
 import { ThemeToggle } from "./theme-toggle";
@@ -57,7 +56,7 @@ export function Header({ lang }: { lang: Lang }) {
         {/* Resume, language switch, theme toggle */}
         <div className="flex items-center gap-1">
           <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ variant: "outline" })}>
-            <FileText /> {c.resume}
+            {c.resume}
           </a>
           <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "ghost" })}>
             {lang === "en" ? "العربية" : "English"}

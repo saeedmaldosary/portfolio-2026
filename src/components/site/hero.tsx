@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown, Check, Mail } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { t, type Lang } from "@/lib/content";
 import portrait from "@/assets/saeed.webp";
@@ -26,15 +26,6 @@ export function Hero({ lang }: { lang: Lang }) {
             <ArrowDown /> {c.seeWork}
           </a>
         </div>
-
-        {/* Quick credibility facts a CTO would otherwise only find further down */}
-        <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t pt-6 text-sm text-muted-foreground">
-          {c.credentials.map((item) => (
-            <li key={item} className="flex items-center gap-2">
-              <Check className="size-4 text-primary" /> {item}
-            </li>
-          ))}
-        </ul>
       </div>
 
       <Image
