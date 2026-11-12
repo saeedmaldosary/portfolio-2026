@@ -163,13 +163,11 @@ export const t = {
       "Lead software engineer with almost 6 years of full-stack experience in Next.js, React and Spring Boot microservices. Based in Riyadh.",
     nav: { experience: "Experience", skills: "Skills", certs: "Certifications", contact: "Contact" },
     theme: "Toggle theme",
-    hello: "Hi, I'm",
     name: "Saeed Aldosary",
     initials: "SA",
-    role: "Lead Software Engineer · Full-Stack",
-    location: "Riyadh, Saudi Arabia",
-    summary:
-      "Lead engineer with almost 6 years of full-stack experience building enterprise web platforms with Next.js, React, and Spring Boot microservices. Currently leading a team of 3 engineers, owning architecture, code quality, and delivery from design to production. Strong in event-driven systems, application security, and CI/CD.",
+    headline: "Lead Software Engineer in Riyadh, with almost 6 years of full-stack experience.",
+    intro:
+      "I lead a team of 3 engineers building enterprise platforms with Next.js and Spring Boot, and I own architecture, code quality and delivery from design to production.",
     resume: "Resume",
     contactCta: "Get in touch",
     experienceTitle: "Experience",
@@ -186,13 +184,11 @@ export const t = {
     metaDesc: "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في Next.js و React و Spring Boot، أقود فريق تطوير في الرياض.",
     nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     theme: "الوضع الليلي / النهاري",
-    hello: "هلا، أنا",
     name: "سعيد الدوسري",
     initials: "س",
-    role: "قائد فريق هندسة البرمجيات · Full-Stack",
-    location: "الرياض، السعودية",
-    summary:
-      "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في بناء منصات Enterprise بـ Next.js و React و Spring Boot Microservices. أقود حالياً فريق من 3 مهندسين، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production. متخصص في Event-driven Systems و Application Security و CI/CD.",
+    headline: "قائد فريق هندسة البرمجيات في الرياض، بخبرة قرابة 6 سنوات في الـ Full-Stack.",
+    intro:
+      "أقود فريق من 3 مهندسين نبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
     experienceTitle: "الخبرة العملية",
