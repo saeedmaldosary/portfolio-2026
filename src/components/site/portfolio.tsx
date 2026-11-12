@@ -3,7 +3,6 @@ import { Certifications } from "./certifications";
 import { Contact } from "./contact";
 import { Experience } from "./experience";
 import { Footer } from "./footer";
-import { Header } from "./header";
 import { Hero } from "./hero";
 import { SelectedWork } from "./selected-work";
 import { Skills } from "./skills";
@@ -12,7 +11,6 @@ import { Skills } from "./skills";
 export function Portfolio({ lang }: { lang: Lang }) {
   return (
     <>
-      <Header lang={lang} />
       <main>
         <Hero lang={lang} />
         <SelectedWork lang={lang} />
