@@ -1,7 +1,7 @@
 import type { Lang } from "@/lib/content";
-import { About } from "./about";
 import { Certifications } from "./certifications";
 import { Contact } from "./contact";
+import { Experience } from "./experience";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import { Hero } from "./hero";
@@ -15,9 +15,9 @@ export function Portfolio({ lang }: { lang: Lang }) {
       <Header lang={lang} />
       <main>
         <Hero lang={lang} />
-        <About lang={lang} />
-        <Projects lang={lang} />
+        <Experience lang={lang} />
         <Skills lang={lang} />
+        <Projects lang={lang} />
         <Certifications lang={lang} />
         <Contact lang={lang} />
       </main>

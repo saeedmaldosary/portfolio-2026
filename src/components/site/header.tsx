@@ -10,9 +10,9 @@ export function Header({ lang }: { lang: Lang }) {
   const otherLangHref = otherLang === "ar" ? `${base}/ar/` : `${base}/`;
 
   const links = [
-    { href: "#about", label: c.nav.about },
-    { href: "#work", label: c.nav.work },
+    { href: "#experience", label: c.nav.experience },
     { href: "#skills", label: c.nav.skills },
+    { href: "#projects", label: c.nav.projects },
     { href: "#certifications", label: c.nav.certs },
     { href: "#contact", label: c.nav.contact },
   ];

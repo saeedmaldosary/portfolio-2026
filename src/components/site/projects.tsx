@@ -9,7 +9,7 @@ export function Projects({ lang }: { lang: Lang }) {
   const c = t[lang];
 
   return (
-    <Section id="work" title={c.workTitle} subtitle={c.workSub}>
+    <Section id="projects" title={c.projectsTitle} subtitle={c.projectsSub}>
       <div className="grid gap-4 md:grid-cols-2">
         {projects.map((project) => (
           <Card key={project.name}>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FileText, Mail } from "lucide-react";
+import { FileText, Mail, MapPin } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { links, t, type Lang } from "@/lib/content";
 import portrait from "@/assets/saeed.png";
@@ -14,7 +14,10 @@ export function Hero({ lang }: { lang: Lang }) {
         <p className="text-lg text-muted-foreground">{c.hello}</p>
         <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">{c.name}</h1>
         <p className="mt-3 text-lg font-medium text-primary">{c.role}</p>
-        <p className="mt-6 leading-relaxed text-muted-foreground">{c.intro}</p>
+        <p className="mt-1 flex items-center gap-1 text-sm text-muted-foreground">
+          <MapPin className="size-4" /> {c.location}
+        </p>
+        <p className="mt-6 leading-relaxed text-muted-foreground">{c.summary}</p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <a href="#contact" className={buttonVariants({ size: "lg" })}>
