@@ -29,11 +29,11 @@ export const experience: Job[] = [
     points: [
       {
         en: "Lead a team of 3 engineers: set technical direction, run code reviews, mentor, and own delivery from Jira ticket to production.",
-        ar: "أقود فريق من 3 مهندسين: أحدد التوجه التقني، وأراجع الكود، وأدعم الفريق وأطوّره، ومسؤول عن التسليم من تذكرة Jira إلى أن يوصل للإنتاج.",
+        ar: "أقود فريق من 3 مهندسين: أحدد التوجه التقني، وأراجع الكود، وأدعم الفريق وأطوّره، ومسؤول عن التسليم من تذكرة Jira إلى الـ Production.",
       },
       {
         en: "Led architecture and development of enterprise web applications in Next.js, improving performance and scalability.",
-        ar: "قدت تصميم وتطوير تطبيقات ويب للمؤسسات بـ Next.js، وحسّنت أداءها وقابليتها للتوسع.",
+        ar: "قدت تصميم وتطوير تطبيقات Enterprise بـ Next.js، وحسّنت الـ Performance والـ Scalability.",
       },
       {
         en: "Architected RESTful and event-driven Spring Boot microservices (clean/hexagonal architecture) with RabbitMQ messaging and JobRunr background jobs.",
@@ -41,7 +41,7 @@ export const experience: Job[] = [
       },
       {
         en: "Designed a multi-tenant architecture with per-tenant data isolation, theming, and configuration, serving multiple organizations from one codebase.",
-        ar: "صممت معمارية Multi-tenant تعزل بيانات كل جهة وإعداداتها وهويتها، وتخدم أكثر من جهة من نفس الكود.",
+        ar: "صممت Multi-tenant Architecture تعزل بيانات كل جهة وإعداداتها وهويتها، وتخدم أكثر من جهة من نفس الكود.",
       },
       {
         en: "Built a feature-flag system for progressive rollouts, A/B testing, and environment toggles, decoupling deployment from release.",
@@ -49,7 +49,7 @@ export const experience: Job[] = [
       },
       {
         en: "Secured services with Keycloak (OAuth2/JWT) and role-based access, and remediated findings from security audits and penetration tests.",
-        ar: "أمّنت الخدمات بـ Keycloak (OAuth2/JWT) وصلاحيات حسب الأدوار، وعالجت ملاحظات الفحص الأمني واختبارات الاختراق.",
+        ar: "أمّنت الخدمات بـ Keycloak (OAuth2/JWT) وصلاحيات حسب الأدوار، وعالجت ملاحظات الـ Security Audits والـ Penetration Testing.",
       },
       {
         en: "Shipped through GitLab CI/CD pipelines, with Prometheus and Grafana monitoring.",
@@ -73,7 +73,7 @@ export const experience: Job[] = [
       },
       {
         en: "Developed and integrated enterprise APIs on Software AG webMethods Integration Server, connecting core internal systems.",
-        ar: "طورت وربطت APIs مؤسسية على webMethods Integration Server من Software AG تربط الأنظمة الداخلية الأساسية.",
+        ar: "طورت وربطت Enterprise APIs على webMethods Integration Server من Software AG تربط الأنظمة الداخلية الأساسية.",
       },
       {
         en: "Built a chatbot with Node.js and Wit.ai NLU and led its handover, including documentation review and integration into stc systems.",
@@ -196,7 +196,7 @@ export const t = {
     role: "قائد فريق هندسة البرمجيات · Full-Stack",
     location: "الرياض، السعودية",
     summary:
-      "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في بناء منصات ويب للمؤسسات بـ Next.js و React و Microservices بـ Spring Boot. أقود حالياً فريق من 3 مهندسين، ومسؤول عن المعمارية وجودة الكود والتسليم من التصميم إلى الإنتاج. عندي خبرة قوية في الأنظمة المبنية على الأحداث (Event-driven)، وأمن التطبيقات، و CI/CD.",
+      "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في بناء منصات Enterprise بـ Next.js و React و Spring Boot Microservices. أقود حالياً فريق من 3 مهندسين، ومسؤول عن الـ Architecture وجودة الكود والتسليم من التصميم إلى الـ Production. متخصص في Event-driven Systems و Application Security و CI/CD.",
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
     experienceTitle: "الخبرة العملية",
