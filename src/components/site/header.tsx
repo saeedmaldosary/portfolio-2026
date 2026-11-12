@@ -1,6 +1,8 @@
+import { buttonVariants } from "@/components/ui/button";
 import { t, type Lang } from "@/lib/content";
-import { LanguageSwitch } from "./language-switch";
 import { ThemeToggle } from "./theme-toggle";
+
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function Header({ lang }: { lang: Lang }) {
   const c = t[lang];
@@ -39,7 +41,9 @@ export function Header({ lang }: { lang: Lang }) {
 
         {/* Language switch + theme toggle */}
         <div className="flex items-center gap-2">
-          <LanguageSwitch current={lang} />
+          <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "outline", size: "sm" })}>
+            {lang === "en" ? "العربية" : "English"}
+          </a>
           <ThemeToggle label={c.theme} />
         </div>
       </nav>
