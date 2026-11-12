@@ -28,12 +28,12 @@ export const experience: Job[] = [
     period: { en: "Aug 2023 – Present", ar: "أغسطس 2023 – الآن" },
     points: [
       {
-        en: "Lead an engineering team: set technical direction, run code reviews, mentor, and own delivery from Jira ticket to production.",
-        ar: "أقود فريق تطوير: Technical Direction و Code Reviews و Mentoring، ومسؤول عن الـ Delivery من تذكرة Jira إلى الـ Production.",
+        en: "Set technical direction, run code reviews, mentor engineers, and own delivery from Jira ticket to production.",
+        ar: "Technical Direction و Code Reviews و Mentoring للفريق، ومسؤول عن الـ Delivery من تذكرة Jira إلى الـ Production.",
       },
       {
-        en: "Led architecture and development of enterprise web applications in Next.js, improving performance and scalability.",
-        ar: "قدت تصميم وتطوير تطبيقات Enterprise بـ Next.js، وحسّنت الـ Performance والـ Scalability.",
+        en: "Built enterprise web applications in Next.js, improving performance and scalability.",
+        ar: "طورت تطبيقات Enterprise بـ Next.js، وحسّنت الـ Performance والـ Scalability.",
       },
       {
         en: "Architected RESTful and event-driven Spring Boot microservices (clean/hexagonal architecture) with RabbitMQ messaging and JobRunr background jobs.",
@@ -76,8 +76,8 @@ export const experience: Job[] = [
         ar: "طورت وربطت Enterprise APIs على webMethods Integration Server من Software AG تربط الـ Core Systems الداخلية.",
       },
       {
-        en: "Built a chatbot with Node.js and Wit.ai NLU and led its handover, including documentation review and integration into stc systems.",
-        ar: "بنيت Chatbot بـ Node.js و Wit.ai، وقدت الـ Handover مع الـ Documentation والربط مع أنظمة stc.",
+        en: "Built a chatbot with Node.js and Wit.ai NLU and handed it over, including documentation review and integration into stc systems.",
+        ar: "بنيت Chatbot بـ Node.js و Wit.ai، وسلّمته مع الـ Documentation والربط مع أنظمة stc.",
       },
       {
         en: "Worked in Scrum teams (PSM I certified): sprint planning, estimation, and sprint reviews with stakeholders.",
@@ -167,7 +167,7 @@ export const t = {
     initials: "SA",
     headline: "Lead Software Engineer with almost 6 years of full-stack experience.",
     intro:
-      "I lead an engineering team building enterprise platforms with Next.js and Spring Boot, and I own architecture, code quality and delivery from design to production.",
+      "I build enterprise platforms with Next.js and Spring Boot, and own architecture, code quality and delivery from design to production.",
     resume: "Resume",
     contactCta: "Get in touch",
     experienceTitle: "Experience",
@@ -181,14 +181,14 @@ export const t = {
   ar: {
     dir: "rtl" as const,
     metaTitle: "سعيد الدوسري — قائد فريق هندسة البرمجيات",
-    metaDesc: "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في Next.js و React و Spring Boot، أقود فريق تطوير.",
+    metaDesc: "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في Next.js و React و Spring Boot.",
     nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     theme: "الوضع الليلي / النهاري",
     name: "سعيد الدوسري",
     initials: "س",
     headline: "قائد فريق هندسة البرمجيات، بخبرة قرابة 6 سنوات في الـ Full-Stack.",
     intro:
-      "أقود فريق تطوير يبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
+      "أبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
     experienceTitle: "الخبرة العملية",
