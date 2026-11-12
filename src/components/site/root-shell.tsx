@@ -12,7 +12,7 @@ const almarai = Almarai({ subsets: ["arabic", "latin"], weight: ["300", "400", "
 // letters on Windows and would win over Almarai).
 // Arabic: Almarai for everything, so words like "Next.js" match the Arabic around them.
 const fontFamily = {
-  en: `'Geist', ${almarai.style.fontFamily}`,
+  en: `${geist.style.fontFamily.split(",")[0]}, ${almarai.style.fontFamily}`,
   ar: almarai.style.fontFamily,
 };
 
