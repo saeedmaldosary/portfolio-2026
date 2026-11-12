@@ -12,7 +12,7 @@ export function Hero({ lang }: { lang: Lang }) {
     <section id="top" className="mx-auto grid max-w-5xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
       <div>
         <p className="text-lg text-muted-foreground">{c.hello}</p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">{c.name}</h1>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight rtl:tracking-normal sm:text-5xl">{c.name}</h1>
         <p className="mt-3 text-lg font-medium text-primary">{c.role}</p>
         <p className="mt-1 flex items-center gap-1 text-sm text-muted-foreground">
           <MapPin className="size-4" /> {c.location}

@@ -24,40 +24,40 @@ export const experience: Job[] = [
   {
     company: "HUMAIN",
     companyNote: { en: "formerly SCAI", ar: "سابقاً SCAI" },
-    role: { en: "Lead Software Engineer", ar: "مهندس برمجيات رئيسي" },
-    period: { en: "Aug 2023 – Present", ar: "أغسطس 2023 – حتى الآن" },
+    role: { en: "Lead Software Engineer", ar: "قائد فريق هندسة البرمجيات" },
+    period: { en: "Aug 2023 – Present", ar: "أغسطس 2023 – الآن" },
     points: [
       {
         en: "Lead a team of 3 engineers: set technical direction, run code reviews, mentor, and own delivery from Jira ticket to production.",
-        ar: "أقود فريقاً من 3 مهندسين: أحدد التوجه التقني، وأراجع الكود، وأوجّه الفريق، وأتحمل مسؤولية التسليم من تذكرة Jira حتى الإنتاج.",
+        ar: "أقود فريق من 3 مهندسين: أحدد التوجه التقني، وأراجع الكود، وأدعم الفريق وأطوّره، ومسؤول عن التسليم من تذكرة Jira إلى أن يوصل للإنتاج.",
       },
       {
         en: "Led architecture and development of enterprise web applications in Next.js, improving performance and scalability.",
-        ar: "قدت تصميم وتطوير تطبيقات ويب مؤسسية باستخدام Next.js، مع تحسين الأداء وقابلية التوسع.",
+        ar: "قدت تصميم وتطوير تطبيقات ويب للمؤسسات بـ Next.js، وحسّنت أداءها وقابليتها للتوسع.",
       },
       {
         en: "Architected RESTful and event-driven Spring Boot microservices (clean/hexagonal architecture) with RabbitMQ messaging and JobRunr background jobs.",
-        ar: "صممت خدمات مصغرة بـ Spring Boot تعتمد على REST والأحداث (معمارية نظيفة/سداسية) مع مراسلة RabbitMQ ومهام خلفية عبر JobRunr.",
+        ar: "صممت Microservices بـ Spring Boot مبنية على REST و Event-driven (Clean / Hexagonal Architecture)، مع RabbitMQ للرسائل و JobRunr للمهام الخلفية.",
       },
       {
         en: "Designed a multi-tenant architecture with per-tenant data isolation, theming, and configuration, serving multiple organizations from one codebase.",
-        ar: "صممت معمارية متعددة المستأجرين مع عزل البيانات والمظهر والإعدادات لكل مستأجر، تخدم عدة جهات من قاعدة كود واحدة.",
+        ar: "صممت معمارية Multi-tenant تعزل بيانات كل جهة وإعداداتها وهويتها، وتخدم أكثر من جهة من نفس الكود.",
       },
       {
         en: "Built a feature-flag system for progressive rollouts, A/B testing, and environment toggles, decoupling deployment from release.",
-        ar: "بنيت نظام مفاتيح ميزات للإطلاق التدريجي واختبارات A/B ومفاتيح البيئات، يفصل النشر عن الإطلاق.",
+        ar: "بنيت نظام Feature Flags للإطلاق التدريجي واختبارات A/B والتحكم في البيئات، بحيث يكون النشر منفصل عن الإطلاق.",
       },
       {
         en: "Secured services with Keycloak (OAuth2/JWT) and role-based access, and remediated findings from security audits and penetration tests.",
-        ar: "أمّنت الخدمات باستخدام Keycloak (OAuth2/JWT) والصلاحيات حسب الأدوار، وعالجت ملاحظات التدقيق الأمني واختبارات الاختراق.",
+        ar: "أمّنت الخدمات بـ Keycloak (OAuth2/JWT) وصلاحيات حسب الأدوار، وعالجت ملاحظات الفحص الأمني واختبارات الاختراق.",
       },
       {
         en: "Shipped through GitLab CI/CD pipelines, with Prometheus and Grafana monitoring.",
-        ar: "أطلقت عبر خطوط GitLab CI/CD مع المراقبة باستخدام Prometheus و Grafana.",
+        ar: "النشر عن طريق GitLab CI/CD، والمراقبة بـ Prometheus و Grafana.",
       },
       {
         en: "Established a shared, accessible design system with shadcn/ui and Tailwind CSS, keeping UI consistent across features.",
-        ar: "أسست نظام تصميم مشتركاً وسهل الوصول باستخدام shadcn/ui و Tailwind CSS للحفاظ على اتساق الواجهات.",
+        ar: "أسست Design System موحّد بـ shadcn/ui و Tailwind CSS يحافظ على تناسق الواجهات في كل الخصائص.",
       },
     ],
   },
@@ -69,19 +69,19 @@ export const experience: Job[] = [
     points: [
       {
         en: "Developed responsive front-end features in JavaScript for stc web applications, building reusable UI components.",
-        ar: "طورت ميزات واجهات متجاوبة بـ JavaScript لتطبيقات stc على الويب، مع بناء مكونات قابلة لإعادة الاستخدام.",
+        ar: "طورت واجهات متجاوبة بـ JavaScript لتطبيقات stc على الويب، مع مكونات قابلة لإعادة الاستخدام.",
       },
       {
         en: "Developed and integrated enterprise APIs on Software AG webMethods Integration Server, connecting core internal systems.",
-        ar: "طورت ودمجت واجهات برمجية مؤسسية على Software AG webMethods Integration Server لربط الأنظمة الداخلية الأساسية.",
+        ar: "طورت وربطت APIs مؤسسية على webMethods Integration Server من Software AG تربط الأنظمة الداخلية الأساسية.",
       },
       {
         en: "Built a chatbot with Node.js and Wit.ai NLU and led its handover, including documentation review and integration into stc systems.",
-        ar: "بنيت روبوت محادثة باستخدام Node.js و Wit.ai وقدت تسليمه، بما في ذلك مراجعة التوثيق ودمجه في أنظمة stc.",
+        ar: "بنيت Chatbot بـ Node.js و Wit.ai، وقدت تسليمه بما فيها مراجعة التوثيق وربطه مع أنظمة stc.",
       },
       {
         en: "Worked in Scrum teams (PSM I certified): sprint planning, estimation, and sprint reviews with stakeholders.",
-        ar: "عملت ضمن فرق Scrum (حاصل على PSM I): تخطيط السبرنت والتقدير ومراجعات السبرنت مع أصحاب المصلحة.",
+        ar: "اشتغلت ضمن فرق Scrum (حاصل على PSM I): تخطيط السبرنت، والتقدير، ومراجعة السبرنت مع أصحاب العلاقة.",
       },
     ],
   },
@@ -95,15 +95,15 @@ export const education = {
 
 export const skillGroups: { title: Text; items: string[] }[] = [
   {
-    title: { en: "Frontend", ar: "الواجهات" },
+    title: { en: "Frontend", ar: "Frontend" },
     items: ["TypeScript", "React", "Next.js", "TanStack Query", "Zustand", "React Hook Form", "Zod", "shadcn/ui", "Tailwind CSS"],
   },
   {
-    title: { en: "Backend", ar: "الخلفية" },
+    title: { en: "Backend", ar: "Backend" },
     items: ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "OpenFeign", "Node.js", "REST APIs", "WebSocket"],
   },
   {
-    title: { en: "Messaging & Caching", ar: "المراسلة والتخزين المؤقت" },
+    title: { en: "Messaging & Caching", ar: "الرسائل و Caching" },
     items: ["RabbitMQ", "NATS", "JobRunr", "Redis"],
   },
   {
@@ -181,32 +181,30 @@ export const t = {
     verify: "Verify",
     contactTitle: "Get in touch",
     contactBody: "Have a role, a project or a question? Email me or connect on LinkedIn.",
-    footer: "Built with Next.js and shadcn/ui.",
   },
   ar: {
     dir: "rtl" as const,
-    metaTitle: "سعيد الدوسري — مهندس برمجيات رئيسي",
-    metaDesc: "مهندس برمجيات رئيسي بخبرة تقارب 6 سنوات في تطوير الأنظمة المتكاملة باستخدام Next.js و React وخدمات Spring Boot المصغرة. مقيم في الرياض.",
+    metaTitle: "سعيد الدوسري — قائد فريق هندسة البرمجيات",
+    metaDesc: "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في Next.js و React و Spring Boot، أقود فريق تطوير في الرياض.",
     nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     switchLang: "English",
-    theme: "تبديل المظهر",
-    hello: "مرحباً، أنا",
+    theme: "الوضع الليلي / النهاري",
+    hello: "هلا، أنا",
     name: "سعيد الدوسري",
     initials: "س",
-    shortRole: "مهندس برمجيات رئيسي",
-    role: "مهندس برمجيات رئيسي · مطور متكامل",
-    location: "الرياض، المملكة العربية السعودية",
+    shortRole: "Lead Software Engineer",
+    role: "قائد فريق هندسة البرمجيات · Full-Stack",
+    location: "الرياض، السعودية",
     summary:
-      "مهندس رئيسي بخبرة تقارب 6 سنوات في تطوير منصات ويب مؤسسية متكاملة باستخدام Next.js و React وخدمات Spring Boot المصغرة. أقود حالياً فريقاً من 3 مهندسين، وأتحمل مسؤولية المعمارية وجودة الكود والتسليم من التصميم حتى الإنتاج. متمكن في الأنظمة المعتمدة على الأحداث وأمن التطبيقات و CI/CD.",
+      "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في بناء منصات ويب للمؤسسات بـ Next.js و React و Microservices بـ Spring Boot. أقود حالياً فريق من 3 مهندسين، ومسؤول عن المعمارية وجودة الكود والتسليم من التصميم إلى الإنتاج. عندي خبرة قوية في الأنظمة المبنية على الأحداث (Event-driven)، وأمن التطبيقات، و CI/CD.",
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
-    experienceTitle: "الخبرات",
+    experienceTitle: "الخبرة العملية",
     educationTitle: "التعليم",
     skillsTitle: "المهارات",
     certsTitle: "الشهادات",
     verify: "تحقق",
     contactTitle: "تواصل معي",
-    contactBody: "عندك فرصة أو مشروع أو سؤال؟ راسلني أو تواصل معي على LinkedIn.",
-    footer: "مبني باستخدام Next.js و shadcn/ui.",
+    contactBody: "عندك فرصة وظيفية أو مشروع أو استفسار؟ راسلني على الإيميل أو تواصل معي في LinkedIn.",
   },
 };
