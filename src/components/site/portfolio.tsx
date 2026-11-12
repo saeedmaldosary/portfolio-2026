@@ -5,7 +5,6 @@ import { Experience } from "./experience";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import { Hero } from "./hero";
-import { Projects } from "./projects";
 import { Skills } from "./skills";
 
 /** The whole one-page site. Used by both the English (/) and Arabic (/ar) routes. */
@@ -17,7 +16,6 @@ export function Portfolio({ lang }: { lang: Lang }) {
         <Hero lang={lang} />
         <Experience lang={lang} />
         <Skills lang={lang} />
-        <Projects lang={lang} />
         <Certifications lang={lang} />
         <Contact lang={lang} />
       </main>

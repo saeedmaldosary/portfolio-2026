@@ -12,7 +12,6 @@ export function Header({ lang }: { lang: Lang }) {
   const links = [
     { href: "#experience", label: c.nav.experience },
     { href: "#skills", label: c.nav.skills },
-    { href: "#projects", label: c.nav.projects },
     { href: "#certifications", label: c.nav.certs },
     { href: "#contact", label: c.nav.contact },
   ];

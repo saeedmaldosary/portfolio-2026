@@ -5,7 +5,6 @@ export type Lang = "en" | "ar";
 type Text = Record<Lang, string>;
 
 export const links = {
-  github: "https://github.com/saeedmaldosary",
   linkedin: "https://linkedin.com/in/smaldosary",
   email: "mailto:Saeedmaldosary@gmail.com",
   emailText: "Saeedmaldosary@gmail.com",
@@ -156,52 +155,13 @@ export const certifications: { name: string; org: string; date: Text; url?: stri
   },
 ];
 
-export const projects: { name: string; repo: string; tags: string[]; desc: Text }[] = [
-  {
-    name: "FlowLearn",
-    repo: "https://github.com/saeedmaldosary/message-craft",
-    tags: ["NATS", "Spring Boot", "Next.js", "STOMP"],
-    desc: {
-      en: "Full-stack platform demonstrating enterprise message-queue patterns: real-time messaging, async processing and resilient delivery over SockJS + STOMP.",
-      ar: "منصة متكاملة تستعرض أنماط طوابير الرسائل في المؤسسات: رسائل لحظية، ومعالجة غير متزامنة، وتوصيل موثوق عبر SockJS و STOMP.",
-    },
-  },
-  {
-    name: "Spring Quiz",
-    repo: "https://github.com/saeedmaldosary/spring-quiz-app",
-    tags: ["Spring Boot", "Keycloak", "PostgreSQL"],
-    desc: {
-      en: "Quiz service in Spring Boot, secured with OAuth2 through Keycloak, with PostgreSQL and JPA.",
-      ar: "خدمة اختبارات بـ Spring Boot محمية بـ OAuth2 عبر Keycloak، مع PostgreSQL و JPA.",
-    },
-  },
-  {
-    name: "Go JWT Auth",
-    repo: "https://github.com/saeedmaldosary/Go-Authentication-JWT",
-    tags: ["Go", "JWT", "PostgreSQL"],
-    desc: {
-      en: "Token-based authentication service in Go: sign-up, login and JWT validation.",
-      ar: "خدمة مصادقة بلغة Go تعتمد على JWT: تسجيل ودخول والتحقق من الرموز.",
-    },
-  },
-  {
-    name: "RSS Aggregator",
-    repo: "https://github.com/saeedmaldosary/Go-RSS-Aggregator",
-    tags: ["Go", "PostgreSQL", "REST"],
-    desc: {
-      en: "Feed aggregation API in Go with user accounts, feed management and per-user subscriptions.",
-      ar: "واجهة برمجية بلغة Go لتجميع الخلاصات مع حسابات المستخدمين وإدارة الخلاصات والاشتراكات.",
-    },
-  },
-];
-
 export const t = {
   en: {
     dir: "ltr" as const,
     metaTitle: "Saeed Aldosary — Lead Software Engineer",
     metaDesc:
       "Lead software engineer with almost 6 years of full-stack experience in Next.js, React and Spring Boot microservices. Based in Riyadh.",
-    nav: { experience: "Experience", skills: "Skills", projects: "Projects", certs: "Certifications", contact: "Contact" },
+    nav: { experience: "Experience", skills: "Skills", certs: "Certifications", contact: "Contact" },
     switchLang: "العربية",
     theme: "Toggle theme",
     hello: "Hi, I'm",
@@ -215,10 +175,6 @@ export const t = {
     experienceTitle: "Experience",
     educationTitle: "Education",
     skillsTitle: "Skills",
-    projectsTitle: "Side projects",
-    projectsSub: "Open-source projects on GitHub.",
-    viewCode: "View code",
-    allRepos: "All repositories",
     certsTitle: "Certifications",
     verify: "Verify",
     contactTitle: "Get in touch",
@@ -229,7 +185,7 @@ export const t = {
     dir: "rtl" as const,
     metaTitle: "سعيد الدوسري — مهندس برمجيات رئيسي",
     metaDesc: "مهندس برمجيات رئيسي بخبرة تقارب 6 سنوات في تطوير الأنظمة المتكاملة باستخدام Next.js و React وخدمات Spring Boot المصغرة. مقيم في الرياض.",
-    nav: { experience: "الخبرات", skills: "المهارات", projects: "المشاريع", certs: "الشهادات", contact: "تواصل" },
+    nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     switchLang: "English",
     theme: "تبديل المظهر",
     hello: "مرحباً، أنا",
@@ -243,10 +199,6 @@ export const t = {
     experienceTitle: "الخبرات",
     educationTitle: "التعليم",
     skillsTitle: "المهارات",
-    projectsTitle: "مشاريع جانبية",
-    projectsSub: "مشاريع مفتوحة المصدر على GitHub.",
-    viewCode: "عرض الكود",
-    allRepos: "كل المستودعات",
     certsTitle: "الشهادات",
     verify: "تحقق",
     contactTitle: "تواصل معي",
