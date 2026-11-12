@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FileText, Mail, MapPin } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { links, t, type Lang } from "@/lib/content";
-import portrait from "@/assets/saeed.png";
+import portrait from "@/assets/saeed.jpg";
 import { SocialLinks } from "./social-links";
 
 export function Hero({ lang }: { lang: Lang }) {
@@ -34,7 +34,7 @@ export function Hero({ lang }: { lang: Lang }) {
         src={portrait}
         alt={c.name}
         priority
-        className="mx-auto w-full max-w-sm rounded-2xl bg-primary/80"
+        className="mx-auto aspect-[4/5] w-full max-w-sm rounded-2xl object-cover object-top"
       />
     </section>
   );

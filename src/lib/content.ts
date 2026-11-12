@@ -10,7 +10,7 @@ export const links = {
   email: "mailto:Saeedmaldosary@gmail.com",
   emailText: "Saeedmaldosary@gmail.com",
   resume:
-    "https://drive.google.com/file/d/1ATLhgErIMLo7KlIoAVgJGGbOORyH6k9j/view?usp=sharing",
+    "https://drive.google.com/file/d/1qdmf5FVxrGfM7QB294XY_v6gRWOh8BSK/view?usp=sharing",
 };
 
 export type Job = {
