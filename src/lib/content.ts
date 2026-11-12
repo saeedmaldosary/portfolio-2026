@@ -162,7 +162,6 @@ export const t = {
     metaDesc:
       "Lead software engineer with almost 6 years of full-stack experience in Next.js, React and Spring Boot microservices. Based in Riyadh.",
     nav: { experience: "Experience", skills: "Skills", certs: "Certifications", contact: "Contact" },
-    switchLang: "العربية",
     theme: "Toggle theme",
     hello: "Hi, I'm",
     name: "Saeed Aldosary",
@@ -187,7 +186,6 @@ export const t = {
     metaTitle: "سعيد الدوسري — قائد فريق هندسة البرمجيات",
     metaDesc: "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في Next.js و React و Spring Boot، أقود فريق تطوير في الرياض.",
     nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
-    switchLang: "English",
     theme: "الوضع الليلي / النهاري",
     hello: "هلا، أنا",
     name: "سعيد الدوسري",

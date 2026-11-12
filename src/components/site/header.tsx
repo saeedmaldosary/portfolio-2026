@@ -1,14 +1,9 @@
-import { Languages } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
 import { t, type Lang } from "@/lib/content";
+import { LanguageSwitch } from "./language-switch";
 import { ThemeToggle } from "./theme-toggle";
-
-const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function Header({ lang }: { lang: Lang }) {
   const c = t[lang];
-  const otherLang = lang === "en" ? "ar" : "en";
-  const otherLangHref = otherLang === "ar" ? `${base}/ar/` : `${base}/`;
 
   const links = [
     { href: "#experience", label: c.nav.experience },
@@ -43,10 +38,8 @@ export function Header({ lang }: { lang: Lang }) {
         </ul>
 
         {/* Language switch + theme toggle */}
-        <div className="flex items-center gap-1">
-          <a href={otherLangHref} lang={otherLang} className={buttonVariants({ variant: "ghost" })}>
-            <Languages /> {c.switchLang}
-          </a>
+        <div className="flex items-center gap-2">
+          <LanguageSwitch current={lang} />
           <ThemeToggle label={c.theme} />
         </div>
       </nav>
