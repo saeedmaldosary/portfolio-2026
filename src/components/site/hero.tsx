@@ -11,18 +11,22 @@ export function Hero({ lang }: { lang: Lang }) {
   const c = t[lang];
 
   return (
-    // On larger screens the hero is at least one screen tall.
-    <section id="top" className="mx-auto flex max-w-5xl flex-col px-4 md:min-h-svh">
+    <section id="top" className="mx-auto max-w-5xl px-4">
       {/* The page has no header: the language switch and theme toggle sit in the top corner */}
       <div className="flex items-center justify-end gap-1 pt-4">
-        <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "ghost" })}>
+        {/* lang tells the browser this link's text is in the other language (it also picks the right font) */}
+        <a
+          href={lang === "en" ? `${base}/ar/` : `${base}/`}
+          lang={lang === "en" ? "ar" : "en"}
+          className={buttonVariants({ variant: "ghost" })}
+        >
           {lang === "en" ? "العربية" : "English"}
         </a>
         <ThemeToggle label={c.theme} />
       </div>
 
-      {/* Text and photo: stacked on phones; side by side and vertically centred on larger screens */}
-      <div className="grid flex-1 items-center gap-12 pt-6 pb-16 md:grid-cols-[1fr_auto] md:py-16">
+      {/* Text and photo: stacked on phones; side by side on larger screens */}
+      <div className="grid items-center gap-12 pt-6 pb-16 md:grid-cols-[1fr_auto] md:pt-12 md:pb-20">
         <div>
           <h1 className="text-5xl font-bold tracking-tight rtl:tracking-normal md:text-6xl">{c.name}</h1>
           <p className="mt-5 text-xl leading-relaxed md:text-2xl">{c.headline}</p>
@@ -35,13 +39,17 @@ export function Hero({ lang }: { lang: Lang }) {
             <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
               {c.resume}
             </a>
+            <a href={links.linkedin} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
+              LinkedIn
+            </a>
           </div>
         </div>
 
         <Image
           src={portrait}
           alt={c.name}
-          priority
+          loading="eager"
+          fetchPriority="high"
           className="mx-auto aspect-[4/5] w-full max-w-sm rounded-2xl bg-primary/80 object-cover object-top md:w-80"
         />
       </div>

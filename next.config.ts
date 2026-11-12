@@ -19,6 +19,12 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  experimental: {
+    // By default the bundler merges small CSS files across pages, which made the English page
+    // preload the Arabic fonts (and the other way round). With requestCost 0, each page loads
+    // only the CSS it imports, so it preloads only its own font.
+    cssChunking: { type: "graph", requestCost: 0 },
+  },
 };
 
 export default nextConfig;
