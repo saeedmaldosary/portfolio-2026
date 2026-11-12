@@ -11,10 +11,19 @@ export function Hero({ lang }: { lang: Lang }) {
     // On larger screens the hero fills the first screen (minus the 4rem header).
     <section
       id="top"
-      className="mx-auto grid max-w-5xl items-center gap-8 px-4 py-12 md:min-h-[calc(100svh-4rem)] md:grid-cols-[1fr_auto] md:gap-12 md:py-16"
+      className="mx-auto grid max-w-5xl items-center gap-12 px-4 py-12 md:min-h-[calc(100svh-4rem)] md:grid-cols-[1fr_auto] md:py-16"
     >
       <div>
-        <h1 className="text-5xl font-bold tracking-tight rtl:tracking-normal md:text-6xl">{c.name}</h1>
+        {/* Phones: a small round photo beside the name (larger screens use the photo card instead) */}
+        <div className="flex items-center gap-4">
+          <Image
+            src={portrait}
+            alt=""
+            priority
+            className="size-16 shrink-0 rounded-full bg-primary/80 object-cover object-top md:hidden"
+          />
+          <h1 className="text-4xl font-bold tracking-tight rtl:tracking-normal md:text-6xl">{c.name}</h1>
+        </div>
         <p className="mt-5 text-xl leading-relaxed md:text-2xl">{c.headline}</p>
         <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">{c.intro}</p>
 
@@ -28,12 +37,12 @@ export function Hero({ lang }: { lang: Lang }) {
         </div>
       </div>
 
-      {/* Phones: a small photo above the name. Larger screens: the photo card on the side. */}
+      {/* Larger screens: the photo card on the side */}
       <Image
         src={portrait}
         alt={c.name}
         priority
-        className="order-first aspect-[4/5] w-36 rounded-2xl bg-primary/80 object-cover object-top md:order-none md:mx-auto md:w-80"
+        className="hidden aspect-[4/5] w-80 rounded-2xl bg-primary/80 object-cover object-top md:block"
       />
     </section>
   );
