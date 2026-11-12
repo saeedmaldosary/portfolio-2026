@@ -33,7 +33,6 @@ export const projects = [
       en: "Full-stack platform demonstrating enterprise message-queue patterns — real-time messaging, async processing and resilient delivery over SockJS + STOMP.",
       ar: "منصة متكاملة تستعرض أنماط طوابير الرسائل على مستوى المؤسسات — رسائل لحظية، ومعالجة غير متزامنة، وتوصيل موثوق عبر SockJS و STOMP.",
     },
-    featured: true,
   },
   {
     name: "Go JWT Auth",
@@ -118,7 +117,6 @@ export const t = {
       "Saeed Aldosary is a full-stack software engineer building real-time systems, APIs and modern web apps.",
     nav: { about: "About", work: "Work", skills: "Skills", certs: "Certifications", contact: "Contact" },
     switchLang: "العربية",
-    status: "Open to interesting projects",
     hello: "Hi, I'm",
     name: "Saeed Aldosary",
     role: "Software Engineer · Full-Stack Developer",
@@ -130,11 +128,6 @@ export const t = {
     aboutBody: [
       "I'm a software engineer with deep experience across the full application lifecycle — understanding the problem, designing the solution, and shipping it to production.",
       "My work spans Java/Spring Boot and Go on the backend, TypeScript with React, Next.js and Vue on the frontend, and event-driven integration with NATS and webMethods.",
-    ],
-    stats: [
-      { value: "5+", label: "Certifications" },
-      { value: "50+", label: "Repositories" },
-      { value: "6+", label: "Languages & runtimes" },
     ],
     workTitle: "Selected work",
     workSub: "A few things I've built recently.",
@@ -155,7 +148,6 @@ export const t = {
     metaDesc: "سعيد الدوسري مهندس برمجيات متكامل يبني أنظمة لحظية وواجهات برمجية وتطبيقات ويب حديثة.",
     nav: { about: "عني", work: "أعمالي", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     switchLang: "English",
-    status: "متاح للمشاريع المميزة",
     hello: "مرحباً، أنا",
     name: "سعيد الدوسري",
     role: "مهندس برمجيات · مطور متكامل",
@@ -166,11 +158,6 @@ export const t = {
     aboutBody: [
       "مهندس برمجيات بخبرة واسعة في دورة حياة التطبيقات كاملة — من فهم المشكلة وتصميم الحل إلى إطلاقه في بيئة الإنتاج.",
       "أعمل على الخلفية باستخدام Java و Spring Boot و Go، وعلى الواجهات باستخدام TypeScript مع React و Next.js و Vue، وفي التكامل المعتمد على الأحداث باستخدام NATS و webMethods.",
-    ],
-    stats: [
-      { value: "+5", label: "شهادات" },
-      { value: "+50", label: "مستودع" },
-      { value: "+6", label: "لغات وبيئات" },
     ],
     workTitle: "أعمال مختارة",
     workSub: "بعض ما بنيته مؤخراً.",

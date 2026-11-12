@@ -137,30 +137,3 @@ html {
   scroll-padding-top: 5rem;
 }
 
-.glow {
-  background:
-    radial-gradient(40rem 30rem at 85% -10%, color-mix(in oklch, var(--primary) 14%, transparent), transparent 70%),
-    radial-gradient(30rem 25rem at -10% 20%, color-mix(in oklch, var(--primary) 10%, transparent), transparent 70%);
-}
-
-.grid-bg {
-  background-image:
-    linear-gradient(to right, var(--border) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse at top, black 20%, transparent 70%);
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.in {
-  opacity: 1;
-  transform: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
-}
