@@ -17,14 +17,10 @@ export function Header({ lang }: { lang: Lang }) {
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
       <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 px-4">
-        {/* Logo: initials badge + name and role */}
-        <a href="#top" className="flex h-16 items-center gap-3">
+        {/* Logo: initials badge, links back to the top */}
+        <a href="#top" aria-label={c.name} className="flex h-16 items-center">
           <span className="grid size-9 place-items-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
             {c.initials}
-          </span>
-          <span className="leading-tight">
-            <span className="block font-semibold">{c.name}</span>
-            <span className="block text-xs text-muted-foreground">{c.shortRole}</span>
           </span>
         </a>
 

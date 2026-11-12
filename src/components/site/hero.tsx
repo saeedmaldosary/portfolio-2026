@@ -3,7 +3,6 @@ import { FileText, Mail, MapPin } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { links, t, type Lang } from "@/lib/content";
 import portrait from "@/assets/saeed.jpg";
-import { SocialLinks } from "./social-links";
 
 export function Hero({ lang }: { lang: Lang }) {
   const c = t[lang];
@@ -26,7 +25,6 @@ export function Hero({ lang }: { lang: Lang }) {
           <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
             <FileText /> {c.resume}
           </a>
-          <SocialLinks />
         </div>
       </div>
 

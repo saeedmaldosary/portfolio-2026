@@ -166,7 +166,6 @@ export const t = {
     hello: "Hi, I'm",
     name: "Saeed Aldosary",
     initials: "SA",
-    shortRole: "Lead Software Engineer",
     role: "Lead Software Engineer · Full-Stack",
     location: "Riyadh, Saudi Arabia",
     summary:
@@ -178,7 +177,7 @@ export const t = {
     skillsTitle: "Skills",
     certsTitle: "Certifications",
     verify: "Verify",
-    contactTitle: "Get in touch",
+    contactTitle: "Contact",
     contactBody: "Have a role, a project or a question? Email me or connect on LinkedIn.",
   },
   ar: {
@@ -190,7 +189,6 @@ export const t = {
     hello: "هلا، أنا",
     name: "سعيد الدوسري",
     initials: "س",
-    shortRole: "Lead Software Engineer",
     role: "قائد فريق هندسة البرمجيات · Full-Stack",
     location: "الرياض، السعودية",
     summary:
@@ -202,7 +200,7 @@ export const t = {
     skillsTitle: "المهارات",
     certsTitle: "الشهادات",
     verify: "تحقق",
-    contactTitle: "تواصل معي",
+    contactTitle: "تواصل",
     contactBody: "عندك فرصة وظيفية أو مشروع أو استفسار؟ راسلني على الإيميل أو تواصل معي في LinkedIn.",
   },
 };
