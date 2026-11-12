@@ -8,9 +8,11 @@ const almarai = Almarai({ subsets: ["arabic", "latin"], weight: ["300", "400", "
 
 // The page font, passed to CSS as --font-main (used by Tailwind's font-sans).
 // English: Geist, with Almarai for any Arabic letters (like the "العربية" button).
+// We use only "Geist" (not its "Geist Fallback", which is Arial; Arial has Arabic
+// letters on Windows and would win over Almarai).
 // Arabic: Almarai for everything, so words like "Next.js" match the Arabic around them.
 const fontFamily = {
-  en: `${geist.style.fontFamily}, ${almarai.style.fontFamily}`,
+  en: `'Geist', ${almarai.style.fontFamily}`,
   ar: almarai.style.fontFamily,
 };
 
