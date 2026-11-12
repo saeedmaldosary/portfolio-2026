@@ -26,7 +26,7 @@ export function buildMetadata(lang: Lang): Metadata {
     metadataBase: new URL(siteUrl),
     title: c.metaTitle,
     description: c.metaDesc,
-    icons: { icon: `${base}/favicon.ico` },
+    icons: { icon: `${base}/favicon.svg` },
     alternates: {
       canonical: `${base}${path}`,
       languages: { en: `${base}/`, ar: `${base}/ar/` },
