@@ -3,9 +3,8 @@
 import { useEffect, useState } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { t, type Lang } from "@/lib/content";
-import { ThemeToggle } from "./theme-toggle";
+import { SiteControls } from "./site-controls";
 
-const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const sectionIds = ["work", "experience", "skills", "certifications", "contact"] as const;
 
 export function Header({ lang }: { lang: Lang }) {
@@ -39,7 +38,8 @@ export function Header({ lang }: { lang: Lang }) {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
+    // Hidden on phones (shown from md up); on phones the language and theme buttons sit at the top of the hero.
+    <header className="sticky top-0 z-50 hidden border-b bg-background/80 backdrop-blur md:block">
       <nav className="mx-auto flex max-w-5xl items-center justify-between gap-6 px-4">
         {/* Logo: initials badge, links back to the top */}
         <a href="#top" aria-label={c.name} className="flex h-16 items-center">
@@ -48,8 +48,8 @@ export function Header({ lang }: { lang: Lang }) {
           </span>
         </a>
 
-        {/* Section links: hidden on phones to keep the header to one row */}
-        <ul className="hidden gap-1 md:flex">
+        {/* Section links */}
+        <ul className="flex gap-1">
           {sections.map((section) => (
             <li key={section.id}>
               <a
@@ -62,13 +62,7 @@ export function Header({ lang }: { lang: Lang }) {
           ))}
         </ul>
 
-        {/* Language switch + theme toggle */}
-        <div className="flex items-center gap-1">
-          <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "ghost" })}>
-            {lang === "en" ? "العربية" : "English"}
-          </a>
-          <ThemeToggle label={c.theme} />
-        </div>
+        <SiteControls lang={lang} />
       </nav>
     </header>
   );
