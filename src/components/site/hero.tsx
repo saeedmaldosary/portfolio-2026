@@ -39,6 +39,9 @@ export function Hero({ lang }: { lang: Lang }) {
             <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
               {c.resume}
             </a>
+            <a href={links.linkedin} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
+              LinkedIn
+            </a>
           </div>
         </div>
 
