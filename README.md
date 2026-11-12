@@ -15,7 +15,7 @@ npm run build      # static export in out/
 
 - Content (from the CV: summary, case studies, experience, skills, certifications, links): `src/lib/content.ts`
 - Page: `src/components/site/portfolio.tsx` puts the sections in order. Each section is one small file:
-  `hero.tsx`, `selected-work.tsx`, `experience.tsx`, `skills.tsx`, `certifications.tsx`, `contact.tsx`, `footer.tsx`
+  `hero.tsx`, `selected-work.tsx`, `experience.tsx`, `skills.tsx`, `certifications.tsx`, `contact.tsx`
   (shared pieces: `section.tsx`, `theme-toggle.tsx`, `brand-icons.tsx`)
 - Routes: `src/app/(en)/page.tsx` (English) and `src/app/(ar)/ar/page.tsx` (Arabic, RTL). Each has its own layout,
   which picks that language's font (Geist for English, Almarai for Arabic) and passes it to `root-shell.tsx`,
