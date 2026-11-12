@@ -28,8 +28,8 @@ export const experience: Job[] = [
     period: { en: "Aug 2023 – Present", ar: "أغسطس 2023 – الآن" },
     points: [
       {
-        en: "Lead a team of 3 engineers: set technical direction, run code reviews, mentor, and own delivery from Jira ticket to production.",
-        ar: "أقود فريق من 3 مهندسين: Technical Direction و Code Reviews و Mentoring، ومسؤول عن الـ Delivery من تذكرة Jira إلى الـ Production.",
+        en: "Lead an engineering team: set technical direction, run code reviews, mentor, and own delivery from Jira ticket to production.",
+        ar: "أقود فريق تطوير: Technical Direction و Code Reviews و Mentoring، ومسؤول عن الـ Delivery من تذكرة Jira إلى الـ Production.",
       },
       {
         en: "Led architecture and development of enterprise web applications in Next.js, improving performance and scalability.",
@@ -167,7 +167,7 @@ export const t = {
     initials: "SA",
     headline: "Lead Software Engineer with almost 6 years of full-stack experience.",
     intro:
-      "I lead a team of 3 engineers building enterprise platforms with Next.js and Spring Boot, and I own architecture, code quality and delivery from design to production.",
+      "I lead an engineering team building enterprise platforms with Next.js and Spring Boot, and I own architecture, code quality and delivery from design to production.",
     resume: "Resume",
     contactCta: "Get in touch",
     experienceTitle: "Experience",
@@ -188,7 +188,7 @@ export const t = {
     initials: "س",
     headline: "قائد فريق هندسة البرمجيات، بخبرة قرابة 6 سنوات في الـ Full-Stack.",
     intro:
-      "أقود فريق من 3 مهندسين نبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
+      "أقود فريق تطوير يبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
     experienceTitle: "الخبرة العملية",
