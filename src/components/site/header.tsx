@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { buttonVariants } from "@/components/ui/button";
-import { links, t, type Lang } from "@/lib/content";
+import { t, type Lang } from "@/lib/content";
 import { ThemeToggle } from "./theme-toggle";
 
 const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const sectionIds = ["work", "experience", "skills", "certifications", "contact"] as const;
 
 export function Header({ lang }: { lang: Lang }) {
   const c = t[lang];
@@ -18,15 +19,23 @@ export function Header({ lang }: { lang: Lang }) {
     { id: "contact", label: c.nav.contact },
   ];
 
-  // Highlight the menu link of the section that is in the middle of the screen.
+  // Highlight the menu link of the section being read: the last section whose top has passed
+  // the middle of the screen. At the very bottom of the page, the last section (Contact).
   const [active, setActive] = useState("");
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((entry) => entry.isIntersecting && setActive(entry.target.id)),
-      { rootMargin: "-45% 0px -50% 0px" },
-    );
-    document.querySelectorAll("main section[id]").forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    function update() {
+      const middle = window.innerHeight / 2;
+      let current = "";
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= middle) current = id;
+      }
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      setActive(atBottom ? "contact" : current);
+    }
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
   }, []);
 
   return (
@@ -53,11 +62,8 @@ export function Header({ lang }: { lang: Lang }) {
           ))}
         </ul>
 
-        {/* Resume, language switch, theme toggle */}
+        {/* Language switch + theme toggle */}
         <div className="flex items-center gap-1">
-          <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ variant: "outline" })}>
-            {c.resume}
-          </a>
           <a href={lang === "en" ? `${base}/ar/` : `${base}/`} className={buttonVariants({ variant: "ghost" })}>
             {lang === "en" ? "العربية" : "English"}
           </a>

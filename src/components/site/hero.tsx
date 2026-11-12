@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ArrowDown, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
-import { t, type Lang } from "@/lib/content";
+import { links, t, type Lang } from "@/lib/content";
 import portrait from "@/assets/saeed.webp";
 
 export function Hero({ lang }: { lang: Lang }) {
@@ -11,7 +11,7 @@ export function Hero({ lang }: { lang: Lang }) {
     // On larger screens the hero fills the first screen (minus the 4rem header).
     <section
       id="top"
-      className="mx-auto grid max-w-5xl items-center gap-12 px-4 py-16 md:min-h-[calc(100svh-4rem)] md:grid-cols-[1fr_auto]"
+      className="mx-auto grid max-w-5xl items-center gap-8 px-4 py-12 md:min-h-[calc(100svh-4rem)] md:grid-cols-[1fr_auto] md:gap-12 md:py-16"
     >
       <div>
         <h1 className="text-5xl font-bold tracking-tight rtl:tracking-normal md:text-6xl">{c.name}</h1>
@@ -22,17 +22,18 @@ export function Hero({ lang }: { lang: Lang }) {
           <a href="#contact" className={buttonVariants({ size: "lg" })}>
             <Mail /> {c.contactCta}
           </a>
-          <a href="#work" className={buttonVariants({ size: "lg", variant: "outline" })}>
-            <ArrowDown /> {c.seeWork}
+          <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
+            {c.resume}
           </a>
         </div>
       </div>
 
+      {/* Phones: a small photo above the name. Larger screens: the photo card on the side. */}
       <Image
         src={portrait}
         alt={c.name}
         priority
-        className="mx-auto aspect-[4/5] w-full max-w-sm rounded-2xl bg-primary/80 object-cover object-top md:w-80"
+        className="order-first aspect-[4/5] w-36 rounded-2xl bg-primary/80 object-cover object-top md:order-none md:mx-auto md:w-80"
       />
     </section>
   );

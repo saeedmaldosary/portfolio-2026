@@ -175,12 +175,6 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-export const education = {
-  school: { en: "Imam Muhammad Ibn Saud Islamic University", ar: "جامعة الإمام محمد بن سعود الإسلامية" },
-  degree: { en: "B.Sc. in Information Systems", ar: "بكالوريوس نظم المعلومات" },
-  period: { en: "Feb 2016 – Dec 2020", ar: "فبراير 2016 – ديسمبر 2020" },
-};
-
 export const skillGroups: { title: Text; items: string[] }[] = [
   {
     title: { en: "Frontend", ar: "Frontend" },
@@ -258,13 +252,11 @@ export const t = {
       "I build enterprise platforms with Next.js and Spring Boot, and own architecture, code quality and delivery from design to production.",
     resume: "Resume",
     contactCta: "Get in touch",
-    seeWork: "See my work",
     workTitle: "Selected work",
     workSub: "Systems I designed and built at HUMAIN.",
     challenge: "Challenge",
     approach: "Approach",
     experienceTitle: "Experience",
-    educationTitle: "Education",
     skillsTitle: "Skills",
     certsTitle: "Certifications",
     verify: "Verify",
@@ -286,13 +278,11 @@ export const t = {
       "أبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
-    seeWork: "استعرض أعمالي",
     workTitle: "أبرز الأعمال",
     workSub: "أنظمة صممتها وبنيتها في HUMAIN.",
     challenge: "التحدي",
     approach: "الحل",
     experienceTitle: "الخبرة العملية",
-    educationTitle: "التعليم",
     skillsTitle: "المهارات",
     certsTitle: "الشهادات",
     verify: "تحقق",
