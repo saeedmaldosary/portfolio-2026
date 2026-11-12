@@ -158,7 +158,7 @@ export const certifications: { name: string; org: string; date: Text; url?: stri
 export const t = {
   en: {
     dir: "ltr" as const,
-    metaTitle: "Saeed Aldosary — Lead Software Engineer",
+    metaTitle: "Saeed Aldosary",
     metaDesc:
       "Lead software engineer with almost 6 years of full-stack experience in Next.js, React and Spring Boot microservices.",
     nav: { experience: "Experience", skills: "Skills", certs: "Certifications", contact: "Contact" },
@@ -180,7 +180,7 @@ export const t = {
   },
   ar: {
     dir: "rtl" as const,
-    metaTitle: "Saeed Aldosary — Lead Software Engineer",
+    metaTitle: "Saeed Aldosary",
     metaDesc: "مهندس برمجيات Full-Stack، 6 سنوات خبرة في Next.js و React و Spring Boot.",
     nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     theme: "الوضع الليلي / النهاري",
