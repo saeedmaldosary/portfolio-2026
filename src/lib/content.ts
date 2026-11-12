@@ -258,7 +258,7 @@ export const t = {
     showDetails: "Show full details",
     showSummary: "Show summary",
     contactTitle: "Contact",
-    contactBody: "Have a role, a project or a question? Email me or connect on LinkedIn.",
+    contactBody: "Have a role, a project or a question? Email me.",
   },
   ar: {
     dir: "rtl" as const,
@@ -282,6 +282,6 @@ export const t = {
     showDetails: "عرض التفاصيل",
     showSummary: "عرض الملخص",
     contactTitle: "تواصل",
-    contactBody: "عندك فرصة وظيفية أو مشروع أو استفسار؟ راسلني على الإيميل أو تواصل معي في LinkedIn.",
+    contactBody: "عندك فرصة وظيفية أو مشروع أو استفسار؟ راسلني على الإيميل.",
   },
 };

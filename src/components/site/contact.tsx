@@ -1,7 +1,6 @@
 import { Mail } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { links, t, type Lang } from "@/lib/content";
-import { LinkedinIcon } from "./brand-icons";
 import { Section } from "./section";
 
 export function Contact({ lang }: { lang: Lang }) {
@@ -9,14 +8,9 @@ export function Contact({ lang }: { lang: Lang }) {
 
   return (
     <Section id="contact" title={c.contactTitle} subtitle={c.contactBody}>
-      <div className="flex flex-wrap items-center gap-3">
-        <a href={links.email} dir="ltr" className={buttonVariants({ size: "lg" })}>
-          <Mail /> {links.emailText}
-        </a>
-        <a href={links.linkedin} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
-          <LinkedinIcon className="size-4" /> LinkedIn
-        </a>
-      </div>
+      <a href={links.email} dir="ltr" className={buttonVariants({ size: "lg" })}>
+        <Mail /> {links.emailText}
+      </a>
     </Section>
   );
 }
