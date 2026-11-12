@@ -29,7 +29,7 @@ export const experience: Job[] = [
     points: [
       {
         en: "Lead a team of 3 engineers: set technical direction, run code reviews, mentor, and own delivery from Jira ticket to production.",
-        ar: "أقود فريق من 3 مهندسين: أحدد التوجه التقني، وأراجع الكود، وأدعم الفريق وأطوّره، ومسؤول عن التسليم من تذكرة Jira إلى الـ Production.",
+        ar: "أقود فريق من 3 مهندسين: أحدد الـ Technical Direction، وأتولى الـ Code Reviews والـ Mentoring، ومسؤول عن الـ Delivery من تذكرة Jira إلى الـ Production.",
       },
       {
         en: "Led architecture and development of enterprise web applications in Next.js, improving performance and scalability.",
@@ -37,27 +37,27 @@ export const experience: Job[] = [
       },
       {
         en: "Architected RESTful and event-driven Spring Boot microservices (clean/hexagonal architecture) with RabbitMQ messaging and JobRunr background jobs.",
-        ar: "صممت Microservices بـ Spring Boot مبنية على REST و Event-driven (Clean / Hexagonal Architecture)، مع RabbitMQ للرسائل و JobRunr للمهام الخلفية.",
+        ar: "صممت Microservices بـ Spring Boot مبنية على REST و Event-driven (Clean / Hexagonal Architecture)، واستخدمت RabbitMQ للـ Messaging و JobRunr للـ Background Jobs.",
       },
       {
         en: "Designed a multi-tenant architecture with per-tenant data isolation, theming, and configuration, serving multiple organizations from one codebase.",
-        ar: "صممت Multi-tenant Architecture تعزل بيانات كل جهة وإعداداتها وهويتها، وتخدم أكثر من جهة من نفس الكود.",
+        ar: "صممت Multi-tenant Architecture فيها Data Isolation و Theming و Configuration لكل Tenant، وتخدم أكثر من جهة من نفس الـ Codebase.",
       },
       {
         en: "Built a feature-flag system for progressive rollouts, A/B testing, and environment toggles, decoupling deployment from release.",
-        ar: "بنيت نظام Feature Flags للإطلاق التدريجي واختبارات A/B والتحكم في البيئات، بحيث يكون النشر منفصل عن الإطلاق.",
+        ar: "بنيت نظام Feature Flags للـ Progressive Rollouts والـ A/B Testing، بحيث يكون الـ Deployment منفصل عن الـ Release.",
       },
       {
         en: "Secured services with Keycloak (OAuth2/JWT) and role-based access, and remediated findings from security audits and penetration tests.",
-        ar: "أمّنت الخدمات بـ Keycloak (OAuth2/JWT) وصلاحيات حسب الأدوار، وعالجت ملاحظات الـ Security Audits والـ Penetration Testing.",
+        ar: "أمّنت الخدمات بـ Keycloak (OAuth2/JWT) و Role-based Access، وعالجت ملاحظات الـ Security Audits والـ Penetration Testing.",
       },
       {
         en: "Shipped through GitLab CI/CD pipelines, with Prometheus and Grafana monitoring.",
-        ar: "النشر عن طريق GitLab CI/CD، والمراقبة بـ Prometheus و Grafana.",
+        ar: "الـ Deployment عن طريق GitLab CI/CD، والـ Monitoring بـ Prometheus و Grafana.",
       },
       {
         en: "Established a shared, accessible design system with shadcn/ui and Tailwind CSS, keeping UI consistent across features.",
-        ar: "أسست Design System موحّد بـ shadcn/ui و Tailwind CSS يحافظ على تناسق الواجهات في كل الخصائص.",
+        ar: "أسست Design System موحّد بـ shadcn/ui و Tailwind CSS يحافظ على تناسق الـ UI في كل الـ Features.",
       },
     ],
   },
@@ -69,19 +69,19 @@ export const experience: Job[] = [
     points: [
       {
         en: "Developed responsive front-end features in JavaScript for stc web applications, building reusable UI components.",
-        ar: "طورت واجهات متجاوبة بـ JavaScript لتطبيقات stc على الويب، مع مكونات قابلة لإعادة الاستخدام.",
+        ar: "طورت Responsive UI بـ JavaScript لتطبيقات stc على الويب، مع Reusable Components.",
       },
       {
         en: "Developed and integrated enterprise APIs on Software AG webMethods Integration Server, connecting core internal systems.",
-        ar: "طورت وربطت Enterprise APIs على webMethods Integration Server من Software AG تربط الأنظمة الداخلية الأساسية.",
+        ar: "طورت وربطت Enterprise APIs على webMethods Integration Server من Software AG تربط الـ Core Systems الداخلية.",
       },
       {
         en: "Built a chatbot with Node.js and Wit.ai NLU and led its handover, including documentation review and integration into stc systems.",
-        ar: "بنيت Chatbot بـ Node.js و Wit.ai، وقدت تسليمه بما فيها مراجعة التوثيق وربطه مع أنظمة stc.",
+        ar: "بنيت Chatbot بـ Node.js و Wit.ai، وقدت الـ Handover مع الـ Documentation والربط مع أنظمة stc.",
       },
       {
         en: "Worked in Scrum teams (PSM I certified): sprint planning, estimation, and sprint reviews with stakeholders.",
-        ar: "اشتغلت ضمن فرق Scrum (حاصل على PSM I): تخطيط السبرنت، والتقدير، ومراجعة السبرنت مع أصحاب العلاقة.",
+        ar: "اشتغلت ضمن فرق Scrum (حاصل على PSM I): Sprint Planning و Estimation و Sprint Reviews مع الـ Stakeholders.",
       },
     ],
   },
@@ -103,23 +103,23 @@ export const skillGroups: { title: Text; items: string[] }[] = [
     items: ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "OpenFeign", "Node.js", "REST APIs", "WebSocket"],
   },
   {
-    title: { en: "Messaging & Caching", ar: "الرسائل و Caching" },
+    title: { en: "Messaging & Caching", ar: "Messaging & Caching" },
     items: ["RabbitMQ", "NATS", "JobRunr", "Redis"],
   },
   {
-    title: { en: "Data", ar: "البيانات" },
+    title: { en: "Data", ar: "Data" },
     items: ["PostgreSQL", "MySQL", "SQL", "Liquibase", "S3/MinIO"],
   },
   {
-    title: { en: "Identity & Access", ar: "الهوية والصلاحيات" },
+    title: { en: "Identity & Access", ar: "Identity & Access" },
     items: ["Keycloak (SSO, role-based access)"],
   },
   {
-    title: { en: "DevOps & Monitoring", ar: "DevOps والمراقبة" },
+    title: { en: "DevOps & Monitoring", ar: "DevOps & Monitoring" },
     items: ["GitLab CI/CD", "Docker", "Prometheus", "Grafana"],
   },
   {
-    title: { en: "Leadership", ar: "القيادة" },
+    title: { en: "Leadership", ar: "Leadership" },
     items: ["Team leadership", "Mentoring", "Code review", "Scrum (PSM I)", "Stakeholder communication"],
   },
 ];
@@ -196,7 +196,7 @@ export const t = {
     role: "قائد فريق هندسة البرمجيات · Full-Stack",
     location: "الرياض، السعودية",
     summary:
-      "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في بناء منصات Enterprise بـ Next.js و React و Spring Boot Microservices. أقود حالياً فريق من 3 مهندسين، ومسؤول عن الـ Architecture وجودة الكود والتسليم من التصميم إلى الـ Production. متخصص في Event-driven Systems و Application Security و CI/CD.",
+      "مهندس برمجيات Full-Stack بخبرة قرابة 6 سنوات في بناء منصات Enterprise بـ Next.js و React و Spring Boot Microservices. أقود حالياً فريق من 3 مهندسين، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production. متخصص في Event-driven Systems و Application Security و CI/CD.",
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
     experienceTitle: "الخبرة العملية",
