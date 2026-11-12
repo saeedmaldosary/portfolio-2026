@@ -8,6 +8,7 @@ export function Header({ lang }: { lang: Lang }) {
   const c = t[lang];
 
   const links = [
+    { href: "#work", label: c.nav.work },
     { href: "#experience", label: c.nav.experience },
     { href: "#skills", label: c.nav.skills },
     { href: "#certifications", label: c.nav.certs },
