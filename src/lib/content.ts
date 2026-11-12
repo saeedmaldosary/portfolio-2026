@@ -29,7 +29,7 @@ export const experience: Job[] = [
     points: [
       {
         en: "Lead a team of 3 engineers: set technical direction, run code reviews, mentor, and own delivery from Jira ticket to production.",
-        ar: "أقود فريق من 3 مهندسين: أحدد الـ Technical Direction، وأتولى الـ Code Reviews والـ Mentoring، ومسؤول عن الـ Delivery من تذكرة Jira إلى الـ Production.",
+        ar: "أقود فريق من 3 مهندسين: Technical Direction و Code Reviews و Mentoring، ومسؤول عن الـ Delivery من تذكرة Jira إلى الـ Production.",
       },
       {
         en: "Led architecture and development of enterprise web applications in Next.js, improving performance and scalability.",
