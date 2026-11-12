@@ -246,7 +246,6 @@ export const t = {
     intro:
       "I build enterprise platforms with Next.js and Spring Boot, and own architecture, code quality and delivery from design to production.",
     resume: "Resume",
-    contactCta: "Get in touch",
     workTitle: "Selected work",
     workSub: "Systems I designed and built.",
     challenge: "Challenge",
@@ -270,7 +269,6 @@ export const t = {
     intro:
       "أبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
     resume: "السيرة الذاتية",
-    contactCta: "تواصل معي",
     workTitle: "أبرز الأعمال",
     workSub: "أنظمة صممتها وبنيتها.",
     challenge: "التحدي",
