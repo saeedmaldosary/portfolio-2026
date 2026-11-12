@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { t, type Lang } from "@/lib/content";
-import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const plexArabic = IBM_Plex_Sans_Arabic({
@@ -45,8 +44,8 @@ export function RootShell({ lang, children }: { lang: Lang; children: React.Reac
       className={`${geist.variable} ${plexArabic.variable} antialiased`}
     >
       <body className="min-h-screen">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <TooltipProvider>{children}</TooltipProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
         </ThemeProvider>
       </body>
     </html>

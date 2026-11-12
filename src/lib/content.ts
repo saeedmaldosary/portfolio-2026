@@ -1,111 +1,156 @@
+// All text on the site lives here, in English (en) and Arabic (ar).
+// Source of truth: Saeed_Aldosary-Lead_Software_Engineer-CV.pdf
+
 export type Lang = "en" | "ar";
+type Text = Record<Lang, string>;
 
 export const links = {
-  github: "https://github.com/saeedmaldosary",
   linkedin: "https://linkedin.com/in/smaldosary",
   email: "mailto:Saeedmaldosary@gmail.com",
   emailText: "Saeedmaldosary@gmail.com",
   resume:
-    "https://drive.google.com/file/d/1ATLhgErIMLo7KlIoAVgJGGbOORyH6k9j/view?usp=sharing",
+    "https://drive.google.com/file/d/1qdmf5FVxrGfM7QB294XY_v6gRWOh8BSK/view?usp=sharing",
 };
 
-export const skillGroups = [
-  {
-    key: "frontend",
-    items: ["TypeScript", "React", "Next.js", "Vue", "Nuxt", "Tailwind CSS"],
-  },
-  {
-    key: "backend",
-    items: ["Java", "Spring Boot", "Go", "Node.js", "Python", "REST APIs"],
-  },
-  {
-    key: "platform",
-    items: ["NATS", "WebSockets", "SQL", "Docker", "Git", "webMethods"],
-  },
-] as const;
+export type Job = {
+  company: string;
+  companyNote: Text;
+  role: Text;
+  period: Text;
+  points: Text[];
+};
 
-export const projects = [
+export const experience: Job[] = [
   {
-    name: "FlowLearn",
-    repo: "https://github.com/saeedmaldosary/message-craft",
-    tags: ["NATS", "Spring Boot", "Next.js", "STOMP"],
-    desc: {
-      en: "Full-stack platform demonstrating enterprise message-queue patterns — real-time messaging, async processing and resilient delivery over SockJS + STOMP.",
-      ar: "منصة متكاملة تستعرض أنماط طوابير الرسائل على مستوى المؤسسات — رسائل لحظية، ومعالجة غير متزامنة، وتوصيل موثوق عبر SockJS و STOMP.",
-    },
-    featured: true,
+    company: "HUMAIN",
+    companyNote: { en: "formerly SCAI", ar: "سابقاً SCAI" },
+    role: { en: "Lead Software Engineer", ar: "مهندس برمجيات رئيسي" },
+    period: { en: "Aug 2023 – Present", ar: "أغسطس 2023 – حتى الآن" },
+    points: [
+      {
+        en: "Lead a team of 3 engineers: set technical direction, run code reviews, mentor, and own delivery from Jira ticket to production.",
+        ar: "أقود فريقاً من 3 مهندسين: أحدد التوجه التقني، وأراجع الكود، وأوجّه الفريق، وأتحمل مسؤولية التسليم من تذكرة Jira حتى الإنتاج.",
+      },
+      {
+        en: "Led architecture and development of enterprise web applications in Next.js, improving performance and scalability.",
+        ar: "قدت تصميم وتطوير تطبيقات ويب مؤسسية باستخدام Next.js، مع تحسين الأداء وقابلية التوسع.",
+      },
+      {
+        en: "Architected RESTful and event-driven Spring Boot microservices (clean/hexagonal architecture) with RabbitMQ messaging and JobRunr background jobs.",
+        ar: "صممت خدمات مصغرة بـ Spring Boot تعتمد على REST والأحداث (معمارية نظيفة/سداسية) مع مراسلة RabbitMQ ومهام خلفية عبر JobRunr.",
+      },
+      {
+        en: "Designed a multi-tenant architecture with per-tenant data isolation, theming, and configuration, serving multiple organizations from one codebase.",
+        ar: "صممت معمارية متعددة المستأجرين مع عزل البيانات والمظهر والإعدادات لكل مستأجر، تخدم عدة جهات من قاعدة كود واحدة.",
+      },
+      {
+        en: "Built a feature-flag system for progressive rollouts, A/B testing, and environment toggles, decoupling deployment from release.",
+        ar: "بنيت نظام مفاتيح ميزات للإطلاق التدريجي واختبارات A/B ومفاتيح البيئات، يفصل النشر عن الإطلاق.",
+      },
+      {
+        en: "Secured services with Keycloak (OAuth2/JWT) and role-based access, and remediated findings from security audits and penetration tests.",
+        ar: "أمّنت الخدمات باستخدام Keycloak (OAuth2/JWT) والصلاحيات حسب الأدوار، وعالجت ملاحظات التدقيق الأمني واختبارات الاختراق.",
+      },
+      {
+        en: "Shipped through GitLab CI/CD pipelines, with Prometheus and Grafana monitoring.",
+        ar: "أطلقت عبر خطوط GitLab CI/CD مع المراقبة باستخدام Prometheus و Grafana.",
+      },
+      {
+        en: "Established a shared, accessible design system with shadcn/ui and Tailwind CSS, keeping UI consistent across features.",
+        ar: "أسست نظام تصميم مشتركاً وسهل الوصول باستخدام shadcn/ui و Tailwind CSS للحفاظ على اتساق الواجهات.",
+      },
+    ],
   },
   {
-    name: "Go JWT Auth",
-    repo: "https://github.com/saeedmaldosary/Go-Authentication-JWT",
-    tags: ["Go", "JWT", "REST"],
-    desc: {
-      en: "Modular token-based authentication service in Go: sign-up, login and JWT validation, built to drop into existing services.",
-      ar: "خدمة مصادقة مبنية بلغة Go باستخدام JWT: تسجيل ودخول والتحقق من الرموز، مصممة لتندمج بسهولة مع الخدمات الحالية.",
-    },
-  },
-  {
-    name: "RSS Aggregator",
-    repo: "https://github.com/saeedmaldosary/Go-RSS-Aggregator",
-    tags: ["Go", "PostgreSQL", "API"],
-    desc: {
-      en: "API for collecting RSS feeds with user accounts, feed management and per-user subscriptions.",
-      ar: "واجهة برمجية لتجميع خلاصات RSS مع حسابات للمستخدمين وإدارة الخلاصات والاشتراكات.",
-    },
-  },
-  {
-    name: "Nuxt Mapbox",
-    repo: "https://github.com/saeedmaldosary/nuxt3-mapbox",
-    tags: ["Nuxt 3", "Vue", "Mapbox"],
-    desc: {
-      en: "Interactive maps in Nuxt 3 — draw polygons and animate routes on Mapbox.",
-      ar: "خرائط تفاعلية باستخدام Nuxt 3 — رسم المضلعات وتحريك المسارات على Mapbox.",
-    },
-  },
-  {
-    name: "Spring Quiz",
-    repo: "https://github.com/saeedmaldosary/spring-quiz-app",
-    tags: ["Java", "Spring Boot"],
-    desc: {
-      en: "Quiz application backend built with Spring Boot.",
-      ar: "خلفية تطبيق اختبارات مبنية باستخدام Spring Boot.",
-    },
+    company: "stc",
+    companyNote: { en: "Saudi Telecom Company", ar: "شركة الاتصالات السعودية" },
+    role: { en: "Software Engineer", ar: "مهندس برمجيات" },
+    period: { en: "Apr 2021 – Aug 2023", ar: "أبريل 2021 – أغسطس 2023" },
+    points: [
+      {
+        en: "Developed responsive front-end features in JavaScript for stc web applications, building reusable UI components.",
+        ar: "طورت ميزات واجهات متجاوبة بـ JavaScript لتطبيقات stc على الويب، مع بناء مكونات قابلة لإعادة الاستخدام.",
+      },
+      {
+        en: "Developed and integrated enterprise APIs on Software AG webMethods Integration Server, connecting core internal systems.",
+        ar: "طورت ودمجت واجهات برمجية مؤسسية على Software AG webMethods Integration Server لربط الأنظمة الداخلية الأساسية.",
+      },
+      {
+        en: "Built a chatbot with Node.js and Wit.ai NLU and led its handover, including documentation review and integration into stc systems.",
+        ar: "بنيت روبوت محادثة باستخدام Node.js و Wit.ai وقدت تسليمه، بما في ذلك مراجعة التوثيق ودمجه في أنظمة stc.",
+      },
+      {
+        en: "Worked in Scrum teams (PSM I certified): sprint planning, estimation, and sprint reviews with stakeholders.",
+        ar: "عملت ضمن فرق Scrum (حاصل على PSM I): تخطيط السبرنت والتقدير ومراجعات السبرنت مع أصحاب المصلحة.",
+      },
+    ],
   },
 ];
 
-export const certifications = [
+export const education = {
+  school: { en: "Imam Muhammad Ibn Saud Islamic University", ar: "جامعة الإمام محمد بن سعود الإسلامية" },
+  degree: { en: "B.Sc. in Information Systems", ar: "بكالوريوس نظم المعلومات" },
+  period: { en: "Feb 2016 – Dec 2020", ar: "فبراير 2016 – ديسمبر 2020" },
+};
+
+export const skillGroups: { title: Text; items: string[] }[] = [
   {
-    org: "Scrum.org",
-    name: { en: "Professional Scrum Master", ar: "Professional Scrum Master" },
-    url: "https://www.credly.com/badges/981a4f52-3525-48ea-a840-0d4dc49f3fcb/",
+    title: { en: "Frontend", ar: "الواجهات" },
+    items: ["TypeScript", "React", "Next.js", "TanStack Query", "Zustand", "React Hook Form", "Zod", "shadcn/ui", "Tailwind CSS"],
   },
   {
-    org: "Software AG",
-    name: {
-      en: "Certified webMethods Integration Associate",
-      ar: "Certified webMethods Integration Associate",
-    },
-    url: "https://www.credly.com/badges/8b34d82f-2d79-4f5a-8aa4-c7c76f158d51/linked_in_profile",
+    title: { en: "Backend", ar: "الخلفية" },
+    items: ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "OpenFeign", "Node.js", "REST APIs", "WebSocket"],
   },
   {
-    org: "API Academy",
-    name: { en: "API Designer", ar: "API Designer" },
-    url: "https://drive.google.com/file/d/1KM065zcvTLEuT02AJNxkZDAFosnH5zZ1/view?usp=sharing",
+    title: { en: "Messaging & Caching", ar: "المراسلة والتخزين المؤقت" },
+    items: ["RabbitMQ", "NATS", "JobRunr", "Redis"],
   },
   {
+    title: { en: "Data", ar: "البيانات" },
+    items: ["PostgreSQL", "MySQL", "SQL", "Liquibase", "S3/MinIO"],
+  },
+  {
+    title: { en: "Identity & Access", ar: "الهوية والصلاحيات" },
+    items: ["Keycloak (SSO, role-based access)"],
+  },
+  {
+    title: { en: "DevOps & Monitoring", ar: "DevOps والمراقبة" },
+    items: ["GitLab CI/CD", "Docker", "Prometheus", "Grafana"],
+  },
+  {
+    title: { en: "Leadership", ar: "القيادة" },
+    items: ["Team leadership", "Mentoring", "Code review", "Scrum (PSM I)", "Stakeholder communication"],
+  },
+];
+
+export const certifications: { name: string; org: string; date: Text; url?: string }[] = [
+  {
+    name: "Certified Kubernetes Application Developer (CKAD)",
+    org: "CNCF / Linux Foundation",
+    date: { en: "Nov 2023", ar: "نوفمبر 2023" },
+  },
+  {
+    name: "Intermediate JavaScript Nanodegree",
     org: "Udacity",
-    name: {
-      en: "Intermediate JavaScript Nanodegree",
-      ar: "Intermediate JavaScript Nanodegree",
-    },
+    date: { en: "Oct 2022", ar: "أكتوبر 2022" },
     url: "https://confirm.udacity.com/A23Y9ZJG",
   },
   {
+    name: "Professional Scrum Master (PSM I)",
+    org: "Scrum.org",
+    date: { en: "Jul 2022", ar: "يوليو 2022" },
+    url: "https://www.credly.com/badges/981a4f52-3525-48ea-a840-0d4dc49f3fcb/",
+  },
+  {
+    name: "Mastering React",
+    org: "Code with Mosh",
+    date: { en: "Jan 2022", ar: "يناير 2022" },
+  },
+  {
+    name: "Front-End Web Development Nanodegree",
     org: "Udacity",
-    name: {
-      en: "Front-End Web Developer Nanodegree",
-      ar: "Front-End Web Developer Nanodegree",
-    },
+    date: { en: "Nov 2020", ar: "نوفمبر 2020" },
     url: "https://confirm.udacity.com/AYHGV7J4",
   },
 ];
@@ -113,76 +158,51 @@ export const certifications = [
 export const t = {
   en: {
     dir: "ltr" as const,
-    metaTitle: "Saeed Aldosary — Software Engineer",
+    metaTitle: "Saeed Aldosary — Lead Software Engineer",
     metaDesc:
-      "Saeed Aldosary is a full-stack software engineer building real-time systems, APIs and modern web apps.",
-    nav: { about: "About", work: "Work", skills: "Skills", certs: "Certifications", contact: "Contact" },
+      "Lead software engineer with almost 6 years of full-stack experience in Next.js, React and Spring Boot microservices. Based in Riyadh.",
+    nav: { experience: "Experience", skills: "Skills", certs: "Certifications", contact: "Contact" },
     switchLang: "العربية",
-    status: "Open to interesting projects",
+    theme: "Toggle theme",
     hello: "Hi, I'm",
     name: "Saeed Aldosary",
-    role: "Software Engineer · Full-Stack Developer",
-    intro:
-      "I design and build reliable software end to end — from real-time messaging systems and APIs to fast, polished web interfaces.",
+    role: "Lead Software Engineer · Full-Stack",
+    location: "Riyadh, Saudi Arabia",
+    summary:
+      "Lead engineer with almost 6 years of full-stack experience building enterprise web platforms with Next.js, React, and Spring Boot microservices. Currently leading a team of 3 engineers, owning architecture, code quality, and delivery from design to production. Strong in event-driven systems, application security, and CI/CD.",
     resume: "Resume",
     contactCta: "Get in touch",
-    aboutTitle: "About",
-    aboutBody: [
-      "I'm a software engineer with deep experience across the full application lifecycle — understanding the problem, designing the solution, and shipping it to production.",
-      "My work spans Java/Spring Boot and Go on the backend, TypeScript with React, Next.js and Vue on the frontend, and event-driven integration with NATS and webMethods.",
-    ],
-    stats: [
-      { value: "5+", label: "Certifications" },
-      { value: "50+", label: "Repositories" },
-      { value: "6+", label: "Languages & runtimes" },
-    ],
-    workTitle: "Selected work",
-    workSub: "A few things I've built recently.",
-    viewCode: "View code",
-    allRepos: "All repositories",
+    experienceTitle: "Experience",
+    educationTitle: "Education",
     skillsTitle: "Skills",
-    skillGroups: { frontend: "Frontend", backend: "Backend", platform: "Integration & tools" },
     certsTitle: "Certifications",
     verify: "Verify",
-    contactTitle: "Let's build something",
-    contactBody: "Have a project, a role or an idea? My inbox is open — I'd love to hear from you.",
-    footer: "Built with Next.js & shadcn/ui.",
-    theme: "Toggle theme",
+    contactTitle: "Get in touch",
+    contactBody: "Have a role, a project or a question? Email me or connect on LinkedIn.",
+    footer: "Built with Next.js and shadcn/ui.",
   },
   ar: {
     dir: "rtl" as const,
-    metaTitle: "سعيد الدوسري — مهندس برمجيات",
-    metaDesc: "سعيد الدوسري مهندس برمجيات متكامل يبني أنظمة لحظية وواجهات برمجية وتطبيقات ويب حديثة.",
-    nav: { about: "عني", work: "أعمالي", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
+    metaTitle: "سعيد الدوسري — مهندس برمجيات رئيسي",
+    metaDesc: "مهندس برمجيات رئيسي بخبرة تقارب 6 سنوات في تطوير الأنظمة المتكاملة باستخدام Next.js و React وخدمات Spring Boot المصغرة. مقيم في الرياض.",
+    nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     switchLang: "English",
-    status: "متاح للمشاريع المميزة",
+    theme: "تبديل المظهر",
     hello: "مرحباً، أنا",
     name: "سعيد الدوسري",
-    role: "مهندس برمجيات · مطور متكامل",
-    intro: "أصمم وأبني برمجيات موثوقة من البداية للنهاية — من أنظمة الرسائل اللحظية والواجهات البرمجية إلى واجهات ويب سريعة ومتقنة.",
+    role: "مهندس برمجيات رئيسي · مطور متكامل",
+    location: "الرياض، المملكة العربية السعودية",
+    summary:
+      "مهندس رئيسي بخبرة تقارب 6 سنوات في تطوير منصات ويب مؤسسية متكاملة باستخدام Next.js و React وخدمات Spring Boot المصغرة. أقود حالياً فريقاً من 3 مهندسين، وأتحمل مسؤولية المعمارية وجودة الكود والتسليم من التصميم حتى الإنتاج. متمكن في الأنظمة المعتمدة على الأحداث وأمن التطبيقات و CI/CD.",
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
-    aboutTitle: "عني",
-    aboutBody: [
-      "مهندس برمجيات بخبرة واسعة في دورة حياة التطبيقات كاملة — من فهم المشكلة وتصميم الحل إلى إطلاقه في بيئة الإنتاج.",
-      "أعمل على الخلفية باستخدام Java و Spring Boot و Go، وعلى الواجهات باستخدام TypeScript مع React و Next.js و Vue، وفي التكامل المعتمد على الأحداث باستخدام NATS و webMethods.",
-    ],
-    stats: [
-      { value: "+5", label: "شهادات" },
-      { value: "+50", label: "مستودع" },
-      { value: "+6", label: "لغات وبيئات" },
-    ],
-    workTitle: "أعمال مختارة",
-    workSub: "بعض ما بنيته مؤخراً.",
-    viewCode: "عرض الكود",
-    allRepos: "كل المستودعات",
+    experienceTitle: "الخبرات",
+    educationTitle: "التعليم",
     skillsTitle: "المهارات",
-    skillGroups: { frontend: "الواجهات", backend: "الخلفية", platform: "التكامل والأدوات" },
     certsTitle: "الشهادات",
     verify: "تحقق",
-    contactTitle: "لنبنِ شيئاً معاً",
-    contactBody: "عندك مشروع أو فرصة أو فكرة؟ يسعدني أسمع منك.",
+    contactTitle: "تواصل معي",
+    contactBody: "عندك فرصة أو مشروع أو سؤال؟ راسلني أو تواصل معي على LinkedIn.",
     footer: "مبني باستخدام Next.js و shadcn/ui.",
-    theme: "تبديل المظهر",
   },
-} as const;
+};
