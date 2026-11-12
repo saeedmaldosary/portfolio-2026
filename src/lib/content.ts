@@ -17,7 +17,6 @@ export type Job = {
   companyNote: Text;
   role: Text;
   period: Text;
-  stack: string;
   points: Text[]; // short summary (shown by default)
   details: Text[]; // full version from the CV
 };
@@ -28,23 +27,23 @@ export const experience: Job[] = [
     companyNote: { en: "formerly SCAI", ar: "سابقاً SCAI" },
     role: { en: "Lead Software Engineer", ar: "قائد فريق هندسة البرمجيات" },
     period: { en: "Aug 2023 – Present", ar: "أغسطس 2023 – الآن" },
-    stack: "Next.js · Spring Boot · RabbitMQ · Keycloak · GitLab CI/CD",
     points: [
+      // The systems themselves are in "Selected work", so these cover the rest of the role.
       {
-        en: "Set technical direction, review code and mentor engineers, from Jira ticket to production.",
-        ar: "Technical Direction و Code Reviews و Mentoring للفريق، من تذكرة Jira إلى الـ Production.",
+        en: "Set technical direction, review code and mentor engineers.",
+        ar: "Technical Direction و Code Reviews و Mentoring للفريق.",
       },
       {
-        en: "Designed Spring Boot microservices and a multi-tenant architecture serving several organizations from one codebase.",
-        ar: "صممت Microservices بـ Spring Boot و Multi-tenant Architecture تخدم أكثر من جهة من نفس الـ Codebase.",
+        en: "Own delivery from Jira ticket to production.",
+        ar: "مسؤول عن الـ Delivery من تذكرة Jira إلى الـ Production.",
       },
       {
-        en: "Built a feature-flag system for gradual rollouts and A/B testing.",
-        ar: "بنيت نظام Feature Flags للـ Progressive Rollouts والـ A/B Testing.",
+        en: "Fixed findings from security audits and penetration tests.",
+        ar: "عالجت ملاحظات الـ Security Audits والـ Penetration Testing.",
       },
       {
-        en: "Secured services with Keycloak (OAuth2/JWT) and fixed security audit findings.",
-        ar: "أمّنت الخدمات بـ Keycloak (OAuth2/JWT) وعالجت ملاحظات الـ Security Audits.",
+        en: "Built a shared design system with shadcn/ui and Tailwind CSS.",
+        ar: "أسست Design System موحّد بـ shadcn/ui و Tailwind CSS.",
       },
     ],
     details: [
@@ -87,7 +86,6 @@ export const experience: Job[] = [
     companyNote: { en: "Saudi Telecom Company", ar: "شركة الاتصالات السعودية" },
     role: { en: "Software Engineer", ar: "مهندس برمجيات" },
     period: { en: "Apr 2021 – Aug 2023", ar: "أبريل 2021 – أغسطس 2023" },
-    stack: "JavaScript · webMethods · Node.js · Scrum",
     points: [
       {
         en: "Built front-end features and reusable UI components in JavaScript.",
@@ -123,11 +121,56 @@ export const experience: Job[] = [
   },
 ];
 
-export const education = {
-  school: { en: "Imam Muhammad Ibn Saud Islamic University", ar: "جامعة الإمام محمد بن سعود الإسلامية" },
-  degree: { en: "B.Sc. in Information Systems", ar: "بكالوريوس نظم المعلومات" },
-  period: { en: "Feb 2016 – Dec 2020", ar: "فبراير 2016 – ديسمبر 2020" },
+export type CaseStudy = {
+  title: Text;
+  challenge: Text;
+  approach: Text;
+  steps: string[]; // diagram boxes, top to bottom
+  focus: string; // the step to highlight in the diagram
 };
+
+// "Selected work": systems from the HUMAIN role, described from the CV.
+export const caseStudies: CaseStudy[] = [
+  {
+    title: { en: "Multi-tenant platform", ar: "منصة Multi-tenant" },
+    challenge: {
+      en: "Serve several organizations from one codebase, without a separate copy per organization.",
+      ar: "نخدم أكثر من جهة من نفس الـ Codebase، بدون نسخة منفصلة لكل جهة.",
+    },
+    approach: {
+      en: "Per-tenant data isolation, theming and configuration, with Keycloak SSO and role-based access.",
+      ar: "Data Isolation و Theming و Configuration لكل Tenant، مع Keycloak للـ SSO والـ Role-based Access.",
+    },
+    steps: ["Org A · Org B · Org C", "Next.js", "Keycloak SSO", "Spring Boot", "Tenant Isolation"],
+    focus: "Tenant Isolation",
+  },
+  {
+    title: { en: "Event-driven microservices", ar: "Event-driven Microservices" },
+    challenge: {
+      en: "Keep services independent, and run slow work outside the user's request.",
+      ar: "خدمات مستقلة عن بعض، والشغل الثقيل يتنفذ خارج الـ Request.",
+    },
+    approach: {
+      en: "Spring Boot microservices (clean/hexagonal) talking through RabbitMQ topic exchanges and durable queues, with JobRunr for background jobs.",
+      ar: "Microservices بـ Spring Boot (Clean / Hexagonal) تتواصل عن طريق RabbitMQ (Topic Exchanges و Durable Queues)، و JobRunr للـ Background Jobs.",
+    },
+    steps: ["Spring Boot Services", "RabbitMQ Exchange", "Durable Queues", "Consumer Services"],
+    focus: "RabbitMQ Exchange",
+  },
+  {
+    title: { en: "Safe releases with feature flags", ar: "إطلاق آمن بالـ Feature Flags" },
+    challenge: {
+      en: "Ship often, without risky big-bang releases.",
+      ar: "نطلق بشكل متكرر، بدون مخاطرة الإطلاقات الكبيرة.",
+    },
+    approach: {
+      en: "A feature-flag system for gradual rollouts and A/B tests, on top of GitLab CI/CD and Prometheus/Grafana monitoring.",
+      ar: "نظام Feature Flags للـ Progressive Rollouts والـ A/B Testing، مع GitLab CI/CD والـ Monitoring بـ Prometheus و Grafana.",
+    },
+    steps: ["Merge", "GitLab CI/CD", "Feature Flags", "Gradual Rollout", "Prometheus & Grafana"],
+    focus: "Feature Flags",
+  },
+];
 
 export const skillGroups: { title: Text; items: string[] }[] = [
   {
@@ -197,17 +240,20 @@ export const t = {
     metaTitle: "Saeed Aldosary",
     metaDesc:
       "Lead software engineer with almost 6 years of full-stack experience in Next.js, React and Spring Boot microservices.",
-    nav: { experience: "Experience", skills: "Skills", certs: "Certifications", contact: "Contact" },
+    nav: { work: "Work", experience: "Experience", skills: "Skills", certs: "Certifications", contact: "Contact" },
     theme: "Toggle theme",
     name: "Saeed Aldosary",
     initials: "SA",
-    headline: "Lead Software Engineer with almost 6 years of full-stack experience.",
+    headline: "Lead Software Engineer at HUMAIN, with almost 6 years of full-stack experience.",
     intro:
       "I build enterprise platforms with Next.js and Spring Boot, and own architecture, code quality and delivery from design to production.",
     resume: "Resume",
     contactCta: "Get in touch",
+    workTitle: "Selected work",
+    workSub: "Systems I designed and built.",
+    challenge: "Challenge",
+    approach: "Approach",
     experienceTitle: "Experience",
-    educationTitle: "Education",
     skillsTitle: "Skills",
     certsTitle: "Certifications",
     verify: "Verify",
@@ -220,17 +266,20 @@ export const t = {
     dir: "rtl" as const,
     metaTitle: "Saeed Aldosary",
     metaDesc: "مهندس برمجيات Full-Stack، 6 سنوات خبرة في Next.js و React و Spring Boot.",
-    nav: { experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
+    nav: { work: "الأعمال", experience: "الخبرات", skills: "المهارات", certs: "الشهادات", contact: "تواصل" },
     theme: "الوضع الليلي / النهاري",
     name: "سعيد الدوسري",
     initials: "SA",
-    headline: "قائد فريق هندسة البرمجيات، و 6 سنوات خبرة في الـ Full-Stack.",
+    headline: "قائد فريق هندسة البرمجيات في HUMAIN، و 6 سنوات خبرة في الـ Full-Stack.",
     intro:
       "أبني منصات Enterprise بـ Next.js و Spring Boot، ومسؤول عن الـ Architecture والـ Code Quality والـ Delivery من الـ Design إلى الـ Production.",
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
+    workTitle: "أبرز الأعمال",
+    workSub: "أنظمة صممتها وبنيتها.",
+    challenge: "التحدي",
+    approach: "الحل",
     experienceTitle: "الخبرة العملية",
-    educationTitle: "التعليم",
     skillsTitle: "المهارات",
     certsTitle: "الشهادات",
     verify: "تحقق",

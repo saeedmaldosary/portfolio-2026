@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { buttonVariants } from "@/components/ui/button";
-import { education, experience, t, type Lang } from "@/lib/content";
+import { experience, t, type Lang } from "@/lib/content";
 import { Section } from "./section";
 
 export function Experience({ lang }: { lang: Lang }) {
@@ -26,9 +26,6 @@ export function Experience({ lang }: { lang: Lang }) {
               </h3>
               <p className="text-sm text-muted-foreground">{job.period[lang]}</p>
             </div>
-            <p className="mt-1 text-sm text-primary">
-              <span dir="ltr">{job.stack}</span>
-            </p>
             <ul className="mt-4 list-disc space-y-2 ps-5 leading-relaxed text-muted-foreground">
               {(showDetails ? job.details : job.points).map((point) => (
                 <li key={point.en}>{point[lang]}</li>
@@ -36,15 +33,6 @@ export function Experience({ lang }: { lang: Lang }) {
             </ul>
           </article>
         ))}
-      </div>
-
-      <h3 className="mt-14 text-2xl font-bold">{c.educationTitle}</h3>
-      <div className="mt-4 flex flex-wrap items-baseline justify-between gap-2">
-        <div>
-          <p className="font-semibold">{education.school[lang]}</p>
-          <p className="text-muted-foreground">{education.degree[lang]}</p>
-        </div>
-        <p className="text-sm text-muted-foreground">{education.period[lang]}</p>
       </div>
     </Section>
   );
