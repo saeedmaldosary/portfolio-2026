@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Mail } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { links, t, type Lang } from "@/lib/content";
 import portrait from "@/assets/saeed.webp";
@@ -33,10 +32,7 @@ export function Hero({ lang }: { lang: Lang }) {
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">{c.intro}</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#contact" className={buttonVariants({ size: "lg" })}>
-              <Mail /> {c.contactCta}
-            </a>
-            <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
+            <a href={links.resume} target="_blank" rel="noopener" className={buttonVariants({ size: "lg" })}>
               {c.resume}
             </a>
             <a href={links.linkedin} target="_blank" rel="noopener" className={buttonVariants({ size: "lg", variant: "outline" })}>
