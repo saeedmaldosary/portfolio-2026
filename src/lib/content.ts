@@ -18,7 +18,8 @@ export type Job = {
   role: Text;
   period: Text;
   stack: string;
-  points: Text[];
+  points: Text[]; // short summary (shown by default)
+  details: Text[]; // full version from the CV
 };
 
 export const experience: Job[] = [
@@ -46,6 +47,40 @@ export const experience: Job[] = [
         ar: "أمّنت الخدمات بـ Keycloak (OAuth2/JWT) وعالجت ملاحظات الـ Security Audits.",
       },
     ],
+    details: [
+      {
+        en: "Set technical direction, run code reviews, mentor engineers, and own delivery from Jira ticket to production.",
+        ar: "Technical Direction و Code Reviews و Mentoring للفريق، ومسؤول عن الـ Delivery من تذكرة Jira إلى الـ Production.",
+      },
+      {
+        en: "Built enterprise web applications in Next.js, improving performance and scalability.",
+        ar: "طورت تطبيقات Enterprise بـ Next.js، وحسّنت الـ Performance والـ Scalability.",
+      },
+      {
+        en: "Architected RESTful and event-driven Spring Boot microservices (clean/hexagonal architecture) with RabbitMQ messaging and JobRunr background jobs.",
+        ar: "صممت Microservices بـ Spring Boot مبنية على REST و Event-driven (Clean / Hexagonal Architecture)، واستخدمت RabbitMQ للـ Messaging و JobRunr للـ Background Jobs.",
+      },
+      {
+        en: "Designed a multi-tenant architecture with per-tenant data isolation, theming, and configuration, serving multiple organizations from one codebase.",
+        ar: "صممت Multi-tenant Architecture فيها Data Isolation و Theming و Configuration لكل Tenant، وتخدم أكثر من جهة من نفس الـ Codebase.",
+      },
+      {
+        en: "Built a feature-flag system for progressive rollouts, A/B testing, and environment toggles, decoupling deployment from release.",
+        ar: "بنيت نظام Feature Flags للـ Progressive Rollouts والـ A/B Testing، بحيث يكون الـ Deployment منفصل عن الـ Release.",
+      },
+      {
+        en: "Secured services with Keycloak (OAuth2/JWT) and role-based access, and remediated findings from security audits and penetration tests.",
+        ar: "أمّنت الخدمات بـ Keycloak (OAuth2/JWT) و Role-based Access، وعالجت ملاحظات الـ Security Audits والـ Penetration Testing.",
+      },
+      {
+        en: "Shipped through GitLab CI/CD pipelines, with Prometheus and Grafana monitoring.",
+        ar: "الـ Deployment عن طريق GitLab CI/CD، والـ Monitoring بـ Prometheus و Grafana.",
+      },
+      {
+        en: "Established a shared, accessible design system with shadcn/ui and Tailwind CSS, keeping UI consistent across features.",
+        ar: "أسست Design System موحّد بـ shadcn/ui و Tailwind CSS يحافظ على تناسق الـ UI في كل الـ Features.",
+      },
+    ],
   },
   {
     company: "stc",
@@ -65,6 +100,24 @@ export const experience: Job[] = [
       {
         en: "Built a Node.js chatbot with Wit.ai and handed it over to stc teams.",
         ar: "بنيت Chatbot بـ Node.js و Wit.ai وسلّمته لفرق stc.",
+      },
+    ],
+    details: [
+      {
+        en: "Developed responsive front-end features in JavaScript for stc web applications, building reusable UI components.",
+        ar: "طورت Responsive UI بـ JavaScript لتطبيقات stc على الويب، مع Reusable Components.",
+      },
+      {
+        en: "Developed and integrated enterprise APIs on Software AG webMethods Integration Server, connecting core internal systems.",
+        ar: "طورت وربطت Enterprise APIs على webMethods Integration Server من Software AG تربط الـ Core Systems الداخلية.",
+      },
+      {
+        en: "Built a chatbot with Node.js and Wit.ai NLU and handed it over, including documentation review and integration into stc systems.",
+        ar: "بنيت Chatbot بـ Node.js و Wit.ai، وسلّمته مع الـ Documentation والربط مع أنظمة stc.",
+      },
+      {
+        en: "Worked in Scrum teams (PSM I certified): sprint planning, estimation, and sprint reviews with stakeholders.",
+        ar: "اشتغلت ضمن فرق Scrum (حاصل على PSM I): Sprint Planning و Estimation و Sprint Reviews مع الـ Stakeholders.",
       },
     ],
   },
@@ -158,6 +211,8 @@ export const t = {
     skillsTitle: "Skills",
     certsTitle: "Certifications",
     verify: "Verify",
+    showDetails: "Show full details",
+    showSummary: "Show summary",
     contactTitle: "Contact",
     contactBody: "Have a role, a project or a question? Email me or connect on LinkedIn.",
   },
@@ -179,6 +234,8 @@ export const t = {
     skillsTitle: "المهارات",
     certsTitle: "الشهادات",
     verify: "تحقق",
+    showDetails: "عرض التفاصيل",
+    showSummary: "عرض الملخص",
     contactTitle: "تواصل",
     contactBody: "عندك فرصة وظيفية أو مشروع أو استفسار؟ راسلني على الإيميل أو تواصل معي في LinkedIn.",
   },

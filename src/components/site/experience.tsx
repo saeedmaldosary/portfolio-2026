@@ -1,12 +1,22 @@
+"use client";
+
+import { useState } from "react";
+import { buttonVariants } from "@/components/ui/button";
 import { education, experience, t, type Lang } from "@/lib/content";
 import { Section } from "./section";
 
 export function Experience({ lang }: { lang: Lang }) {
   const c = t[lang];
+  // false = short summary, true = full details from the CV
+  const [showDetails, setShowDetails] = useState(false);
 
   return (
     <Section id="experience" title={c.experienceTitle}>
-      <div className="space-y-12">
+      <button onClick={() => setShowDetails(!showDetails)} className={buttonVariants({ variant: "outline", size: "sm" })}>
+        {showDetails ? c.showSummary : c.showDetails}
+      </button>
+
+      <div className="mt-8 space-y-12">
         {experience.map((job) => (
           <article key={job.company}>
             <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -20,7 +30,7 @@ export function Experience({ lang }: { lang: Lang }) {
               <span dir="ltr">{job.stack}</span>
             </p>
             <ul className="mt-4 list-disc space-y-2 ps-5 leading-relaxed text-muted-foreground">
-              {job.points.map((point) => (
+              {(showDetails ? job.details : job.points).map((point) => (
                 <li key={point.en}>{point[lang]}</li>
               ))}
             </ul>
