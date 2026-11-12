@@ -166,6 +166,8 @@ export const t = {
     theme: "Toggle theme",
     hello: "Hi, I'm",
     name: "Saeed Aldosary",
+    initials: "SA",
+    shortRole: "Lead Software Engineer",
     role: "Lead Software Engineer · Full-Stack",
     location: "Riyadh, Saudi Arabia",
     summary:
@@ -190,6 +192,8 @@ export const t = {
     theme: "تبديل المظهر",
     hello: "مرحباً، أنا",
     name: "سعيد الدوسري",
+    initials: "س",
+    shortRole: "مهندس برمجيات رئيسي",
     role: "مهندس برمجيات رئيسي · مطور متكامل",
     location: "الرياض، المملكة العربية السعودية",
     summary:

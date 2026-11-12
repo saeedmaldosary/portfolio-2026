@@ -8,8 +8,8 @@ export function ThemeToggle({ label }: { label: string }) {
   const { resolvedTheme, setTheme } = useTheme();
   return (
     <Button
-      variant="outline"
-      size="icon-lg"
+      variant="ghost"
+      size="icon"
       aria-label={label}
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
