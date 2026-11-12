@@ -17,7 +17,6 @@ export type Job = {
   companyNote: Text;
   role: Text;
   period: Text;
-  stack: string;
   points: Text[]; // short summary (shown by default)
   details: Text[]; // full version from the CV
 };
@@ -28,7 +27,6 @@ export const experience: Job[] = [
     companyNote: { en: "formerly SCAI", ar: "سابقاً SCAI" },
     role: { en: "Lead Software Engineer", ar: "قائد فريق هندسة البرمجيات" },
     period: { en: "Aug 2023 – Present", ar: "أغسطس 2023 – الآن" },
-    stack: "Next.js · Spring Boot · RabbitMQ · Keycloak · GitLab CI/CD",
     points: [
       // The systems themselves are in "Selected work", so these cover the rest of the role.
       {
@@ -88,7 +86,6 @@ export const experience: Job[] = [
     companyNote: { en: "Saudi Telecom Company", ar: "شركة الاتصالات السعودية" },
     role: { en: "Software Engineer", ar: "مهندس برمجيات" },
     period: { en: "Apr 2021 – Aug 2023", ar: "أبريل 2021 – أغسطس 2023" },
-    stack: "JavaScript · webMethods · Node.js · Scrum",
     points: [
       {
         en: "Built front-end features and reusable UI components in JavaScript.",
@@ -253,7 +250,7 @@ export const t = {
     resume: "Resume",
     contactCta: "Get in touch",
     workTitle: "Selected work",
-    workSub: "Systems I designed and built at HUMAIN.",
+    workSub: "Systems I designed and built.",
     challenge: "Challenge",
     approach: "Approach",
     experienceTitle: "Experience",
@@ -279,7 +276,7 @@ export const t = {
     resume: "السيرة الذاتية",
     contactCta: "تواصل معي",
     workTitle: "أبرز الأعمال",
-    workSub: "أنظمة صممتها وبنيتها في HUMAIN.",
+    workSub: "أنظمة صممتها وبنيتها.",
     challenge: "التحدي",
     approach: "الحل",
     experienceTitle: "الخبرة العملية",

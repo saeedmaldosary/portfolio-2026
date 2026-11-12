@@ -26,9 +26,6 @@ export function Experience({ lang }: { lang: Lang }) {
               </h3>
               <p className="text-sm text-muted-foreground">{job.period[lang]}</p>
             </div>
-            <p className="mt-1 text-sm text-primary">
-              <span dir="ltr">{job.stack}</span>
-            </p>
             <ul className="mt-4 list-disc space-y-2 ps-5 leading-relaxed text-muted-foreground">
               {(showDetails ? job.details : job.points).map((point) => (
                 <li key={point.en}>{point[lang]}</li>
